@@ -1,0 +1,3932 @@
+<!DOCTYPE html>
+<html lang="bn" data-lang="bn" data-theme="dark" data-font-size="md" data-card-style="default" data-accent="blue">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="ProServices Hub - সকল ডিজিটাল সার্ভিস এক জায়গায়। PDF, Image, Video, Audio প্রসেস করুন বিনামূল্যে। দ্রুত, নিরাপদ, পেশাদার।">
+    <meta name="keywords" content="PDF, Image, Video, Audio, QR, Text, Security, Dev, Calculator, প্রসেস, বিনামূল্যে, বাংলাদেশ">
+    <meta name="author" content="ProServices Hub">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0f1e">
+    <meta property="og:title" content="ProServices Hub — সকল সার্ভিস এক জায়গায়">
+    <meta property="og:description" content="সকল ডিজিটাল সার্ভিস এক জায়গায়। PDF, Image, Video, Audio প্রসেস করুন বিনামূল্যে।">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://proserviceshub.com">
+    <meta property="og:locale" content="bn_BD">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ProServices Hub — সকল সার্ভিস এক জায়গায়">
+    <meta name="twitter:description" content="সকল ডিজিটাল সার্ভিস এক জায়গায়। PDF, Image, Video, Audio প্রসেস করুন বিনামূল্যে।">
+    <link rel="canonical" href="https://proserviceshub.com">
+    <link rel="manifest" href="data:application/json,{'name':'ProServices Hub','short_name':'ProServices','start_url':'/','display':'standalone','background_color':'%230a0f1e','theme_color':'%233b82f6'}">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text x='50' y='65' text-anchor='middle' fill='white' font-size='50' font-weight='bold'>P</text></svg>">
+    <title>ProServices Hub — সকল সার্ভিস এক জায়গায়</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ==================== গ্লোবাল রিসেট ও ভেরিয়েবল ==================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* -- রুট ভেরিয়েবল (ডার্ক থিম ডিফল্ট) -- */
+:root {
+            --bg: #0a0f1e;
+            /* পৃষ্ঠার ব্যাকগ্রাউন্ড */
+            --surface: #111827;
+            /* কার্ড, প্যানেল, মডালের ব্যাকগ্রাউন্ড */
+            --surface2: #1a2236;
+            /* হোভার, সেকেন্ডারি সারফেস */
+            --surface3: #0d1525;
+            /* গভীর সারফেস */
+            --border: #1e2d45;
+            /* বর্ডার রং */
+            --border2: #253352;
+            /* সেকেন্ডারি বর্ডার */
+            --accent: #3b82f6;
+            /* প্রধান অ্যাকসেন্ট রং (নীল) */
+            --accent2: #6366f1;
+            /* সেকেন্ডারি অ্যাকসেন্ট */
+            --accent-rgb: 59, 130, 246;
+            /* অ্যাকসেন্টের RGB মান */
+            --text: #e2e8f0;
+            /* প্রধান টেক্সট রং */
+            --text-muted: #94a3b8;
+            /* সাবটেক্সট */
+            --text-dim: #64748b;
+            /* ডিম টেক্সট */
+            --success: #10b981;
+            /* সফল/সক্রিয় রং */
+            --warning: #f59e0b;
+            /* সতর্ক/শীঘ্রই রং */
+            --danger: #ef4444;
+            /* বিপদ/ত্রুটি রং */
+            --info: #06b6d4;
+            /* তথ্য রং */
+            --rating-star: #f59e0b;
+            /* রেটিং তারকা রং */
+            --radius: 16px;
+            /* প্রধান বর্ডার রেডিয়াস */
+            --radius-sm: 10px;
+            /* ছোট বর্ডার রেডিয়াস */
+            --radius-xs: 6px;
+            /* অতিরিক্ত ছোট রেডিয়াস */
+            --shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            /* বড় ছায়া */
+            --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.4);
+            /* ছোট ছায়া */
+            --glow: 0 0 30px rgba(var(--accent-rgb), 0.2);
+            /* অ্যাকসেন্ট গ্লো */
+            --font: 'Inter', 'Hind Siliguri', sans-serif;
+            /* ফন্ট ফ্যামিলি */
+            --tr: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            /* ট্রানজিশন টাইমিং */
+            --header-h: 64px;
+            /* হেডার উচ্চতা */
+            --fs-xs: 11px;
+            /* অতি ছোট ফন্ট */
+            --fs-sm: 13px;
+            /* ছোট ফন্ট */
+            --fs-md: 15px;
+            /* মাঝারি ফন্ট (ডিফল্ট) */
+            --fs-lg: 17px;
+            /* বড় ফন্ট */
+            --fs-xl: 21px;
+            /* অতি বড় ফন্ট */
+        }
+
+        /* -- লাইট থিম ওভাররাইড -- */
+        [data-theme="light"] {
+            --bg: #f0f4ff;
+            --surface: #ffffff;
+            --surface2: #f8faff;
+            --surface3: #eef2ff;
+            --border: #dde3f0;
+            --border2: #c7d0e8;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --text-dim: #94a3b8;
+            --shadow: 0 4px 24px rgba(30, 41, 59, 0.10);
+            --shadow-sm: 0 2px 8px rgba(30, 41, 59, 0.06);
+            --glow: 0 0 20px rgba(var(--accent-rgb), 0.15);
+        }
+
+        /* -- অ্যাকসেন্ট রং ভেরিয়েন্ট -- */
+        [data-accent="green"] {
+            --accent: #10b981;
+            --accent2: #059669;
+            --accent-rgb: 16, 185, 129;
+        }
+        [data-accent="purple"] {
+            --accent: #8b5cf6;
+            --accent2: #7c3aed;
+            --accent-rgb: 139, 92, 246;
+        }
+        [data-accent="red"] {
+            --accent: #ef4444;
+            --accent2: #dc2626;
+            --accent-rgb: 239, 68, 68;
+        }
+        [data-accent="orange"] {
+            --accent: #f97316;
+            --accent2: #ea580c;
+            --accent-rgb: 249, 115, 22;
+        }
+        [data-accent="teal"] {
+            --accent: #06b6d4;
+            --accent2: #0891b2;
+            --accent-rgb: 6, 182, 212;
+        }
+
+        /* -- ফন্ট সাইজ ভেরিয়েন্ট -- */
+        [data-font-size="sm"] {
+            font-size: 13px;
+        }
+        [data-font-size="md"] {
+            font-size: 15px;
+        }
+        [data-font-size="lg"] {
+            font-size: 17px;
+        }
+
+        /* ==================== বেসিক HTML এলিমেন্ট স্টাইল ==================== */
+        html {
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-size: var(--fs-md);
+            transition: background var(--tr), color var(--tr);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* -- টেক্সট সিলেকশন রং -- */
+        ::selection {
+            background: rgba(var(--accent-rgb), 0.3);
+            color: var(--text);
+        }
+        ::-moz-selection {
+            background: rgba(var(--accent-rgb), 0.3);
+            color: var(--text);
+        }
+
+        /* ==================== স্ক্রোল প্রোগ্রেস বার ==================== */
+        #scrollProgressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            z-index: 10001;
+            transition: width 0.15s ease;
+            border-radius: 0 2px 2px 0;
+        }
+
+        /* ==================== হেডার স্টাইল ==================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 15, 30, 0.92);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--border);
+            height: var(--header-h);
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            gap: 10px;
+            transition: background var(--tr), border-color var(--tr);
+        }
+        [data-theme="light"] header {
+            background: rgba(240, 244, 255, 0.94);
+        }
+
+        /* -- লোগো -- */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text);
+            flex: 1;
+            min-width: 0;
+            outline: none;
+        }
+        .logo:focus-visible {
+            border-radius: 12px;
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        .logo-mark {
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #fff;
+            font-size: 18px;
+            box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.3);
+            transition: transform var(--tr);
+        }
+        .logo:hover .logo-mark {
+            transform: scale(1.05);
+        }
+        .logo-name {
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .logo-name span {
+            color: var(--accent);
+        }
+
+        /* -- হেডারের ডান দিকের বাটন গ্রুপ -- */
+        .hdr-right {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+        .ibtn {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-muted);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+            transition: var(--tr);
+            position: relative;
+            user-select: none;
+            flex-shrink: 0;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ibtn:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        .ibtn:hover {
+            background: var(--surface2);
+            color: var(--text);
+            border-color: var(--accent);
+            transform: scale(1.02);
+        }
+        .ibtn:active {
+            transform: scale(0.96);
+        }
+        .ibtn.active {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: rgba(var(--accent-rgb), 0.12);
+        }
+        /* বুকমার্ক বাটনের জন্য আলাদা প্যাডিং (বড় সংখ্যা দেখানোর জন্য) */
+        .hdr-right .ibtn[data-tab="bookmarks"] {
+            padding: 0 10px;
+            width: auto;
+            min-width: 40px;
+        }
+
+        /* ==================== সার্ভিস মডাল ==================== */
+        .service-modal-backdrop {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            touch-action: manipulation;
+        }
+        .service-modal-backdrop.visible {
+            display: flex;
+        }
+        .service-modal {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 560px;
+            max-height: 85vh;
+            overflow-y: auto;
+            animation: modalIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+        }
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+        .sm-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 24px 16px;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: var(--surface);
+            z-index: 2;
+        }
+        .sm-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+        .sm-title-group {
+            flex: 1;
+            min-width: 0;
+        }
+        .sm-title {
+            font-size: var(--fs-lg);
+            font-weight: 800;
+        }
+        .sm-category {
+            font-size: 11px;
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
+        }
+        .sm-close {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-muted);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            transition: var(--tr);
+            flex-shrink: 0;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        .sm-close:hover {
+            background: var(--danger);
+            color: #fff;
+            border-color: var(--danger);
+        }
+        .sm-close:active {
+            transform: scale(0.92);
+        }
+        .sm-body {
+            padding: 20px 24px;
+        }
+        .sm-description {
+            color: var(--text-muted);
+            font-size: var(--fs-sm);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .sm-hint-text {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-dim);
+            margin-bottom: 14px;
+            padding: 10px 16px;
+            background: var(--surface2);
+            border-radius: 20px;
+            display: block;
+            width: 100%;
+        }
+        .sm-status-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 20px;
+            font-size: var(--fs-sm);
+            font-weight: 600;
+        }
+        .sm-status-row.active-status {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: var(--success);
+        }
+        .sm-status-row.soon-status {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: var(--warning);
+        }
+        .sm-status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .sm-status-dot.active-dot {
+            background: var(--success);
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
+            animation: pulse 2s infinite;
+        }
+        .sm-status-dot.soon-dot {
+            background: var(--warning);
+        }
+        .sm-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .sm-action-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: var(--surface2);
+            color: var(--text);
+            cursor: pointer;
+            font-size: var(--fs-sm);
+            font-weight: 600;
+            transition: var(--tr);
+            text-decoration: none;
+            font-family: var(--font);
+            text-align: left;
+            width: 100%;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        .sm-action-btn:hover {
+            border-color: var(--accent);
+            background: rgba(var(--accent-rgb), 0.08);
+            transform: translateX(4px);
+        }
+        .sm-action-btn:active {
+            transform: scale(0.98);
+        }
+        .sm-action-btn .sm-action-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+            width: 28px;
+            text-align: center;
+        }
+        .sm-action-btn .sm-action-text {
+            flex: 1;
+        }
+        .sm-action-btn .sm-action-arrow {
+            color: var(--text-dim);
+            font-size: 16px;
+            transition: var(--tr);
+        }
+        .sm-action-btn:hover .sm-action-arrow {
+            color: var(--accent);
+            transform: translateX(4px);
+        }
+        .sm-action-btn.primary-action {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+            justify-content: center;
+            font-size: 15px;
+        }
+        .sm-action-btn.primary-action:hover {
+            background: var(--accent2);
+            border-color: var(--accent2);
+        }
+        .sm-action-btn.primary-action .sm-action-arrow {
+            color: #fff;
+        }
+        .sm-footer {
+            padding: 16px 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .sm-view-count {
+            font-size: 11px;
+            color: var(--text-dim);
+        }
+        .sm-rating-stars {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-left: auto;
+        }
+        .sm-rating-stars .star {
+            font-size: 20px;
+            color: var(--text-dim);
+            cursor: pointer;
+            transition: var(--tr);
+            padding: 4px;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .sm-rating-stars .star:hover,
+        .sm-rating-stars .star.active {
+            color: var(--rating-star);
+        }
+
+        /* ==================== কার্ড কাস্টমাইজ প্যানেল ==================== */
+        .card-customize-backdrop {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            display: none;
+        }
+        .card-customize-backdrop.visible {
+            display: block;
+        }
+        .card-customize-panel {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10000;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 24px;
+            width: min(420px, 90vw);
+            max-height: 80vh;
+            overflow-y: auto;
+            display: none;
+            animation: fadeDown 0.2s ease;
+        }
+        .card-customize-panel.visible {
+            display: block;
+        }
+        .ccp-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .ccp-header h3 {
+            font-size: var(--fs-lg);
+            font-weight: 700;
+        }
+        .ccp-close {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: var(--tr);
+        }
+        .ccp-close:hover {
+            background: var(--danger);
+            color: #fff;
+            border-color: var(--danger);
+        }
+        .ccp-group {
+            margin-bottom: 16px;
+        }
+        .ccp-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            display: block;
+        }
+        .ccp-color-options {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .ccp-color-dot {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: var(--tr);
+        }
+        .ccp-color-dot:hover,
+        .ccp-color-dot.active {
+            border-color: #fff;
+            transform: scale(1.15);
+        }
+        .ccp-size-options {
+            display: flex;
+            gap: 8px;
+        }
+        .ccp-size-btn {
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: var(--surface2);
+            color: var(--text);
+            cursor: pointer;
+            font-size: 12px;
+            transition: var(--tr);
+            font-family: var(--font);
+        }
+        .ccp-size-btn:hover,
+        .ccp-size-btn.active {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(var(--accent-rgb), 0.1);
+        }
+        .ccp-save-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--tr);
+            font-family: var(--font);
+            margin-top: 8px;
+        }
+        .ccp-save-btn:hover {
+            background: var(--accent2);
+        }
+        .ccp-reset-btn {
+            width: 100%;
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            font-size: 13px;
+            cursor: pointer;
+            transition: var(--tr);
+            font-family: var(--font);
+            margin-top: 8px;
+        }
+        .ccp-reset-btn:hover {
+            border-color: var(--danger);
+            color: var(--danger);
+        }
+
+        /* ==================== সাইড মেনু ==================== */
+        .side-menu-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 4998;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease;
+        }
+        .side-menu-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: min(100px, 90vw);
+            max-width: 400px;
+            background: var(--surface);
+            border-left: 1px solid var(--border);
+            box-shadow: -20px 0 30px rgba(0, 0, 0, 0.8);
+            transform: translateX(105%);
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            z-index: 4999;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            will-change: transform;
+        }
+        .side-menu.open {
+            transform: translateX(0%);
+        }
+        .side-menu-header {
+            padding: 10px 10px;
+            border-bottom: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--surface);
+            flex-shrink: 0;
+        }
+        .side-menu-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .side-menu-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 800;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        .side-menu-title-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .side-menu-title {
+            font-size: var(--fs-sm);
+            font-weight: 700;
+            color: var(--text);
+        }
+        .side-menu-subtitle {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .side-menu-close {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: var(--tr);
+            flex-shrink: 0;
+            outline: none;
+        }
+        .side-menu-close:hover {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--danger);
+            border-color: var(--danger);
+        }
+        .side-menu-body {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 8px 0;
+        }
+        .side-menu-search-wrap {
+            padding: 12px 16px;
+            position: sticky;
+            top: 0;
+            background: var(--surface);
+            z-index: 2;
+            top: -15px;
+        }
+        .side-menu-search {
+            width: 100%;
+            height: 42px;
+            background: var(--surface2);
+            border: 2px solid var(--border);
+            border-radius: 21px;
+            padding: 0 40px 0 16px;
+            font-size: var(--fs-sm);
+            color: var(--text);
+            outline: none;
+            transition: var(--tr);
+            font-family: var(--font);
+        }
+        .side-menu-search::placeholder {
+            color: var(--text-dim);
+            font-size: 12px;
+        }
+        .side-menu-search:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.15);
+        }
+        .menu-group {
+            margin: 4px 0;
+        }
+        .menu-group-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: var(--tr);
+            user-select: none;
+            border-left: 3px solid transparent;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .menu-group-header:hover {
+            background: var(--surface2);
+            border-left-color: rgba(var(--accent-rgb), 0.4);
+        }
+        .menu-group-header.expanded {
+            background: rgba(var(--accent-rgb), 0.06);
+            border-left-color: var(--accent);
+        }
+        .menu-group-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .menu-group-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .menu-group-name {
+            font-size: var(--fs-sm);
+            font-weight: 600;
+        }
+        .menu-group-desc {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 1px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .menu-group-count {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--accent);
+            background: rgba(var(--accent-rgb), 0.1);
+            padding: 3px 10px;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+        .menu-group-arrow {
+            font-size: 12px;
+            color: var(--text-dim);
+            transition: transform var(--tr);
+            flex-shrink: 0;
+        }
+        .menu-group-header.expanded .menu-group-arrow {
+            transform: rotate(180deg);
+            color: var(--accent);
+        }
+        .menu-group-items {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        .menu-group-items.expanded {
+            max-height: 600px;
+            opacity: 1;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px 10px 40px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: var(--fs-sm);
+            transition: var(--tr);
+            cursor: pointer;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+            border-left: 3px solid transparent;
+        }
+        .menu-item:hover {
+            background: var(--surface2);
+            padding-left: 44px;
+            border-left-color: var(--accent);
+        }
+        .menu-item-icon {
+            font-size: 16px;
+            width: 22px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .menu-item-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .menu-item-name {
+            font-weight: 500;
+            font-size: var(--fs-sm);
+        }
+        .menu-item-bookmark {
+            font-size: 14px;
+            cursor: pointer;
+            color: var(--text-dim);
+            transition: var(--tr);
+            flex-shrink: 0;
+            padding: 6px;
+            border-radius: 4px;
+        }
+        .menu-item-bookmark:hover {
+            color: var(--warning);
+        }
+        .menu-item-bookmark.bookmarked {
+            color: var(--warning);
+        }
+        .menu-item-badge {
+            font-size: 9px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 12px;
+            flex-shrink: 0;
+            letter-spacing: 0.3px;
+        }
+        .badge-new {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+        }
+        .badge-soon {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--warning);
+        }
+        .badge-ai {
+            background: rgba(139, 92, 246, 0.15);
+            color: #8b5cf6;
+        }
+        .side-menu-footer {
+            padding: 14px 16px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .side-menu-footer a {
+            font-size: 12px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--tr);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ==================== সেটিংস প্যানেল ==================== */
+        .settings-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 6000;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: none;
+            justify-content: flex-end;
+        }
+        .settings-overlay.open {
+            display: flex;
+        }
+        .settings-panel {
+            width: 100%;
+            max-width: 420px;
+            height: 100%;
+            background: var(--surface);
+            border-left: 1px solid var(--border);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            animation: slideFromRight 0.3s ease;
+        }
+        @keyframes slideFromRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        .sp-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: var(--surface);
+            z-index: 10;
+        }
+        .sp-header h2 {
+            font-size: var(--fs-lg);
+            font-weight: 800;
+            flex: 1;
+        }
+        .sp-close {
+            width: 36px;
+            height: 36px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--tr);
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .sp-close:hover {
+            background: var(--danger);
+            color: #fff;
+            border-color: var(--danger);
+        }
+        .sp-body {
+            padding: 20px 24px;
+            flex: 1;
+        }
+        .sg {
+            margin-bottom: 28px;
+        }
+        .sg-title {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--text-dim);
+            margin-bottom: 12px;
+            padding-left: 4px;
+        }
+        .srow {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            transition: var(--tr);
+            border: 1px solid transparent;
+            margin-bottom: 6px;
+            cursor: default;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .srow.clickable {
+            cursor: pointer;
+        }
+        .srow.clickable:hover {
+            background: var(--surface2);
+            border-color: var(--border);
+        }
+        .srow .s-icon {
+            font-size: 22px;
+            width: 30px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .srow .s-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .srow .s-label {
+            font-size: var(--fs-sm);
+            font-weight: 600;
+        }
+        .srow .s-desc {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        .srow .s-control {
+            flex-shrink: 0;
+        }
+        .tog {
+            width: 46px;
+            height: 26px;
+            border-radius: 13px;
+            background: var(--border);
+            position: relative;
+            cursor: pointer;
+            transition: var(--tr);
+            flex-shrink: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .tog.on {
+            background: var(--accent);
+        }
+        .tog::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #fff;
+            transition: var(--tr);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+        }
+        .tog.on::after {
+            left: 23px;
+        }
+        .s-select {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            color: var(--text);
+            border-radius: var(--radius-sm);
+            padding: 8px 32px 8px 12px;
+            font-size: var(--fs-sm);
+            outline: none;
+            cursor: pointer;
+            transition: var(--tr);
+            font-family: var(--font);
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            min-width: 100px;
+        }
+        .s-select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.15);
+        }
+        .accent-swatches {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .swatch {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: var(--tr);
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .swatch:hover,
+        .swatch.active {
+            border-color: #fff;
+            transform: scale(1.18);
+        }
+        .sw-blue {
+            background: #3b82f6;
+        }
+        .sw-green {
+            background: #10b981;
+        }
+        .sw-purple {
+            background: #8b5cf6;
+        }
+        .sw-red {
+            background: #ef4444;
+        }
+        .sw-orange {
+            background: #f97316;
+        }
+        .sw-teal {
+            background: #06b6d4;
+        }
+
+        /* ==================== হিরো সেকশন ==================== */
+        .hero {
+            padding: 10px 10px 10px;
+            text-align: center;
+            background: radial-gradient(ellipse 10% 15% at 20% -5%, rgba(var(--accent-rgb), 0.12), transparent);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(var(--accent-rgb), 0.1);
+            border: 1px solid rgba(var(--accent-rgb), 0.28);
+            border-radius: 20px;
+            padding: 5px 10px;
+            font-size: var(--fs-sm);
+            color: var(--accent);
+            margin-bottom: 10px;
+            animation: fadeDown 0.6s ease;
+            font-weight: 500;
+        }
+
+        /* ==================== সার্চ সেকশন ==================== */
+        .search-section {
+            padding: 80px 16px 10px;
+            background: var(--bg);
+            position: relative;
+            z-index: 10;
+        }
+        .search-container {
+            max-width: 680px;
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 10;
+        }
+        .search-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 6px;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+        }
+        .search-wrapper:focus-within {
+            border-color: var(--accent);
+            box-shadow: var(--glow), 0 4px 24px rgba(0, 0, 0, 0.2);
+            transform: translateY(-1px);
+        }
+        .search-input-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            font-size: 20px;
+            color: var(--text-dim);
+        }
+        .search-wrapper:focus-within .search-input-icon {
+            color: var(--accent);
+        }
+        .search-input {
+            flex: 1;
+            height: 44px;
+            background: transparent;
+            border: none;
+            padding: 0 12px;
+            font-size: var(--fs-md);
+            color: var(--text);
+            outline: none;
+            font-family: var(--font);
+            min-width: 0;
+        }
+        .search-input::placeholder {
+            color: var(--text-dim);
+            opacity: 0.7;
+            font-size: 14px;
+        }
+        .search-clear-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: none;
+            background: transparent;
+            color: var(--text-dim);
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: var(--tr);
+            flex-shrink: 0;
+            outline: none;
+        }
+        .search-clear-btn.visible {
+            display: flex;
+        }
+        .search-clear-btn:hover {
+            background: rgba(var(--accent-rgb), 0.1);
+            color: var(--text);
+        }
+        .search-divider {
+            width: 1px;
+            height: 28px;
+            background: var(--border);
+            margin: 0 4px;
+            flex-shrink: 0;
+        }
+        .search-submit {
+            height: 44px;
+            padding: 0 22px;
+            border-radius: 12px;
+            background: var(--accent);
+            border: none;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--tr);
+            outline: none;
+            flex-shrink: 0;
+            font-family: var(--font);
+            white-space: nowrap;
+        }
+        .search-submit:hover {
+            background: var(--accent2);
+            transform: scale(1.02);
+        }
+        .search-submit svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+        .search-suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+        .search-suggestion-tag {
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: var(--surface2);
+            color: var(--text-muted);
+            font-size: 12px;
+            cursor: pointer;
+            transition: var(--tr);
+            user-select: none;
+            font-family: var(--font);
+            white-space: nowrap;
+        }
+        .search-suggestion-tag:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(var(--accent-rgb), 0.08);
+        }
+        .search-info-bar {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 680px;
+            margin: 0 auto 16px;
+            padding: 10px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-size: var(--fs-sm);
+            animation: fadeDown 0.3s ease;
+        }
+        .search-info-bar.visible {
+            display: flex;
+        }
+        .search-info-text {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .search-info-text strong {
+            color: var(--accent);
+        }
+        .search-info-clear {
+            color: var(--accent);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 8px;
+            transition: var(--tr);
+            border: 1px solid transparent;
+            background: transparent;
+            font-family: var(--font);
+        }
+
+        /* ==================== প্যানেল সেকশন ==================== */
+        .sec {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px 16px;
+        }
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 14px;
+            overflow: hidden;
+            transition: border-color var(--tr), box-shadow var(--tr);
+        }
+        .ph {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 22px;
+            cursor: pointer;
+            user-select: none;
+            transition: background var(--tr);
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ph:hover {
+            background: var(--surface2);
+        }
+        .ph-ico {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        .ph-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .ph-name {
+            font-size: var(--fs-md);
+            font-weight: 700;
+        }
+        .ph-sub {
+            font-size: var(--fs-xs);
+            color: var(--text-muted);
+            margin-top: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .ph-cnt {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 12px;
+            border-radius: 20px;
+            background: rgba(var(--accent-rgb), 0.1);
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+        .arr {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--tr);
+            font-size: 17px;
+            flex-shrink: 0;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .arr.open {
+            transform: rotate(180deg);
+            color: var(--accent);
+            border-color: var(--accent);
+            background: rgba(var(--accent-rgb), 0.1);
+        }
+        .pb {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-top: 1px solid transparent;
+        }
+        .pb.open {
+            max-height: 800px;
+            border-top-color: var(--border);
+        }
+        .sg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+            padding: 16px 22px 22px;
+        }
+        .slink {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: var(--tr);
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .slink:hover {
+            border-color: var(--accent);
+            background: rgba(var(--accent-rgb), 0.07);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
+        .slink .sl-ico {
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+        .slink .sl-txt {
+            font-size: var(--fs-sm);
+            font-weight: 500;
+        }
+
+        /* ==================== কার্ড সেকশন (মেইন গ্রিড) ==================== */
+        .cards-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px 16px;
+        }
+        .tabs-container {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+            flex-wrap: nowrapwrap;
+        }
+        .tab-btn {
+            padding: 5px 10px;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: var(--tr);
+            font-family: var(--font);
+            white-space: nowrap;
+        }
+        .tab-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .tab-btn.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .card {
+            background: var(--card-bg, var(--surface));
+            border: 1px solid var(--card-border, var(--border));
+            border-radius: var(--card-radius, var(--radius));
+            padding: var(--card-padding, 20px);
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            transition: var(--tr);
+            position: relative;
+            overflow: hidden;
+            transform: translateY(0);
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            -webkit-touch-callout: none;
+        }
+        .card:hover {
+            border-color: rgba(var(--accent-rgb), 0.5);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow), var(--glow);
+        }
+        .card:active {
+            transform: translateY(-2px);
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--tr);
+            z-index: 1;
+        }
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+        .card:hover .c-arr {
+            transform: translateX(6px);
+        }
+        .card-hint {
+            position: absolute;
+            bottom: 8px;
+            right: 50px;
+            font-size: 9px;
+            color: var(--text-dim);
+            background: var(--surface2);
+            padding: 3px 8px;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 2;
+            white-space: nowrap;
+        }
+        .card:hover .card-hint {
+            opacity: 1;
+        }
+        .card-bookmark {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            z-index: 2;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 15px;
+            color: var(--text-dim);
+            transition: var(--tr);
+        }
+        .card-bookmark:hover {
+            color: var(--warning);
+            border-color: var(--warning);
+        }
+        .card-bookmark.bookmarked {
+            color: var(--warning);
+            background: rgba(245, 158, 11, 0.1);
+            border-color: var(--warning);
+        }
+        .card-customize-btn {
+            position: absolute;
+            top: 12px;
+            right: 52px;
+            z-index: 2;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 14px;
+            color: var(--text-dim);
+            transition: var(--tr);
+        }
+        .card-customize-btn:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: rgba(var(--accent-rgb), 0.1);
+        }
+        .card-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding-right: 70px;
+        }
+        .card-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+        .card-title-group {
+            flex: 1;
+            min-width: 0;
+        }
+        .card-title {
+            font-size: var(--fs-sm);
+            font-weight: 700;
+            margin-bottom: 3px;
+            line-height: 1.3;
+        }
+        .card-category {
+            font-size: 10px;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        .card-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 12px;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .card-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+        .c-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .sdot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            flex-shrink: 0;
+        }
+        .sdot.g {
+            background: var(--success);
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+        }
+        .sdot.y {
+            background: var(--warning);
+            box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+        }
+        .c-arr {
+            color: var(--text-dim);
+            font-size: 18px;
+            transition: var(--tr);
+            background: var(--surface2);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card:hover .c-arr {
+            color: #fff;
+            background: var(--accent);
+        }
+
+        /* -- আইকন ব্যাকগ্রাউন্ড ক্লাস -- */
+        .ic-blue {
+            background: rgba(59, 130, 246, 0.15);
+        }
+        .ic-purple {
+            background: rgba(99, 102, 241, 0.15);
+        }
+        .ic-teal {
+            background: rgba(6, 182, 212, 0.15);
+        }
+        .ic-green {
+            background: rgba(16, 185, 129, 0.15);
+        }
+        .ic-orange {
+            background: rgba(249, 115, 22, 0.15);
+        }
+        .ic-pink {
+            background: rgba(236, 72, 153, 0.15);
+        }
+        .ic-red {
+            background: rgba(239, 68, 68, 0.15);
+        }
+        .ic-yellow {
+            background: rgba(234, 179, 8, 0.15);
+        }
+        .ic-indigo {
+            background: rgba(99, 102, 241, 0.15);
+        }
+        .ic-cyan {
+            background: rgba(6, 182, 212, 0.15);
+        }
+
+        /* ==================== টোস্ট নোটিফিকেশন ==================== */
+        .toast-container {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            pointer-events: none;
+        }
+        .toast {
+            padding: 12px 20px;
+            border-radius: 12px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            font-size: 13px;
+            font-weight: 500;
+            animation: toastIn 0.4s ease, toastOut 0.4s ease 2.6s forwards;
+            pointer-events: auto;
+            max-width: 400px;
+            text-align: center;
+        }
+        .toast-success {
+            border-color: var(--success);
+            color: var(--success);
+        }
+        .toast-error {
+            border-color: var(--danger);
+            color: var(--danger);
+        }
+        .toast-info {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .toast-warning {
+            border-color: var(--warning);
+            color: var(--warning);
+        }
+        @keyframes toastIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes toastOut {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+
+        /* ==================== টপ বাটন (পেজে উপরে যাওয়ার) ==================== */
+        #topBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.4);
+            z-index: 999;
+            transition: var(--tr);
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        #topBtn:hover {
+            transform: scale(1.1);
+        }
+
+        /* ==================== ফুটার ==================== */
+        footer {
+            margin-top: 60px;
+            padding: 32px 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: var(--fs-sm);
+        }
+        footer strong {
+            color: var(--accent);
+        }
+
+        /* ==================== অ্যানিমেশন কীফ্রেম ==================== */
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
+            }
+            60% {
+                box-shadow: 0 0 0 7px rgba(16, 185, 129, 0);
+            }
+        }
+
+        /* ==================== রেসপনসিভ ডিজাইন ==================== */
+        @media (max-width: 900px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .sg-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .side-menu {
+                width: min(350px, 88vw);
+            }
+            .hero {
+                padding: 70px 12px 36px;
+            }
+            .hero h1 {
+                font-size: clamp(24px, 8vw, 40px);
+            }
+            .card {
+                padding: 16px;
+            }
+            .card-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+            .card-top {
+                gap: 10px;
+                margin-bottom: 10px;
+                padding-right: 65px;
+            }
+            .card-title {
+                font-size: 13px;
+            }
+            .card-desc {
+                font-size: 11px;
+            }
+            .service-modal {
+                max-width: 95vw;
+            }
+            .sm-header {
+                padding: 16px 18px 12px;
+            }
+            .sm-body {
+                padding: 16px 18px;
+            }
+            .sm-footer {
+                padding: 12px 18px;
+            }
+            .sm-close {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+            .card-bookmark {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+                top: 10px;
+                right: 10px;
+            }
+            .card-customize-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 13px;
+                top: 10px;
+                right: 46px;
+            }
+            .card-hint {
+                bottom: 6px;
+                right: 42px;
+                font-size: 8px;
+            }
+        }
+        @media (max-width: 500px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            .sg-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 0 8px;
+                gap: 5px;
+            }
+            .logo-name {
+                font-size: 13px;
+            }
+            .ibtn {
+                width: 36px;
+                height: 36px;
+                font-size: 17px;
+                border-radius: 10px;
+            }
+            .hero {
+                padding: 64px 10px 28px;
+            }
+            .side-menu {
+                width: min(300px, 85vw);
+            }
+            #topBtn {
+                bottom: 20px;
+                right: 20px;
+                width: 42px;
+                height: 42px;
+                font-size: 18px;
+            }
+            .card {
+                padding: 14px;
+                border-radius: 14px;
+            }
+            .card-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+            }
+            .card-top {
+                gap: 8px;
+                margin-bottom: 8px;
+                padding-right: 60px;
+            }
+            .card-title {
+                font-size: 13px;
+            }
+            .card-desc {
+                font-size: 11px;
+                margin-bottom: 8px;
+            }
+            .c-status {
+                font-size: 10px;
+                gap: 4px;
+            }
+            .c-arr {
+                width: 26px;
+                height: 26px;
+                font-size: 16px;
+            }
+            .card-bookmark {
+                top: 8px;
+                right: 8px;
+                width: 28px;
+                height: 28px;
+                font-size: 13px;
+            }
+            .card-customize-btn {
+                top: 8px;
+                right: 40px;
+                width: 28px;
+                height: 28px;
+                font-size: 12px;
+            }
+            .service-modal-backdrop {
+                padding: 10px;
+            }
+            .sm-header {
+                padding: 12px 14px 10px;
+                gap: 10px;
+            }
+            .sm-icon {
+                width: 44px;
+                height: 44px;
+                font-size: 22px;
+            }
+            .sm-title {
+                font-size: 15px;
+            }
+            .sm-close {
+                width: 38px;
+                height: 38px;
+                font-size: 20px;
+                border-radius: 12px;
+            }
+            .sm-body {
+                padding: 14px;
+            }
+            .sm-footer {
+                padding: 10px 14px;
+            }
+            .sm-action-btn {
+                padding: 12px 14px;
+                font-size: 12px;
+            }
+            .sm-rating-stars .star {
+                font-size: 18px;
+                padding: 3px;
+            }
+            .card-hint {
+                bottom: 6px;
+                right: 36px;
+                font-size: 7px;
+            }
+        }
+        @media (max-width: 360px) {
+            .cards {
+                gap: 8px;
+            }
+            .card {
+                padding: 12px;
+            }
+            .card-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+            }
+            .card-title {
+                font-size: 12px;
+            }
+            .card-desc {
+                font-size: 10px;
+            }
+            .logo-name {
+                font-size: 11px;
+            }
+            .ibtn {
+                width: 32px;
+                height: 32px;
+                font-size: 15px;
+            }
+        }
+
+        /* ==================== স্ক্রলবার কাস্টমাইজেশন ==================== */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ==================== স্ক্রোল প্রোগ্রেস বার ==================== -->
+    <div id="scrollProgressBar"></div>
+
+    <!-- ==================== সার্ভিস মডাল (পপআপ) ==================== -->
+    <div class="service-modal-backdrop" id="serviceModalBackdrop">
+        <div class="service-modal" id="serviceModal">
+            <div class="sm-header">
+                <div class="sm-icon" id="smIcon">
+                    📄
+                </div>
+                <div class="sm-title-group">
+                    <div class="sm-title" id="smTitle">
+                        PDF Merge
+                    </div>
+                    <div class="sm-category" id="smCategory">
+                        PDF
+                    </div>
+                </div>
+                <button class="sm-close" onclick="closeServiceModal()" aria-label="বন্ধ করুন">✕</button>
+            </div>
+            <div class="sm-body">
+                <div class="sm-hint-text" data-bn="💡 ট্যাপ = সার্ভিসে যান | ধরে রাখুন = এই বক্স | বাইরে ট্যাপ = বন্ধ" data-en="💡 Tap = Go to service | Long press = This box | Tap outside = Close">
+                    💡 ট্যাপ = সার্ভিসে যান | ধরে রাখুন = এই বক্স | বাইরে ট্যাপ = বন্ধ
+                </div>
+                <p class="sm-description" id="smDescription">
+                    পেশাদার PDF টুলস
+                </p>
+                <div class="sm-status-row" id="smStatusRow">
+                    <span class="sm-status-dot" id="smStatusDot"></span>
+                    <span id="smStatusText">সক্রিয়</span>
+                </div>
+                <div class="sm-actions">
+                    <a class="sm-action-btn primary-action" id="smPrimaryAction" href="#" target="_blank">
+                        <span>🚀</span>
+                        <span class="sm-action-text" id="smPrimaryActionText" data-bn="এখনই ব্যবহার করুন" data-en="Use Now">এখনই ব্যবহার করুন</span>
+                        <span class="sm-action-arrow">→</span>
+                    </a>
+                    <button class="sm-action-btn" id="smBookmarkBtn" onclick="modalToggleBookmark()">
+                        <span class="sm-action-icon" id="smBookmarkIcon">☆</span>
+                        <span class="sm-action-text" id="smBookmarkText" data-bn="বুকমার্ক করুন" data-en="Bookmark">বুকমার্ক করুন</span>
+                    </button>
+                    <button class="sm-action-btn" id="smCustomizeBtn" onclick="modalCustomize()">
+                        <span class="sm-action-icon">🎨</span>
+                        <span class="sm-action-text" data-bn="কার্ড কাস্টমাইজ করুন" data-en="Customize Card">কার্ড কাস্টমাইজ করুন</span>
+                    </button>
+                    <button class="sm-action-btn" id="smShareBtn" onclick="modalShare()">
+                        <span class="sm-action-icon">📤</span>
+                        <span class="sm-action-text" data-bn="শেয়ার করুন" data-en="Share">শেয়ার করুন</span>
+                    </button>
+                    <button class="sm-action-btn" id="smCopyLinkBtn" onclick="modalCopyLink()">
+                        <span class="sm-action-icon">📋</span>
+                        <span class="sm-action-text" data-bn="লিংক কপি করুন" data-en="Copy Link">লিংক কপি করুন</span>
+                    </button>
+                </div>
+            </div>
+            <div class="sm-footer">
+                <span class="sm-view-count" id="smViewCount">👁️ 0 বার দেখা হয়েছে</span>
+                <div class="sm-rating-stars" id="smRatingStars"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== কার্ড কাস্টমাইজ প্যানেল ==================== -->
+    <div class="card-customize-backdrop" id="cardCustomizeBackdrop"></div>
+    <div class="card-customize-panel" id="cardCustomizePanel">
+        <div class="ccp-header">
+            <h3 data-bn="কার্ড কাস্টমাইজ করুন" data-en="Customize Card">কার্ড কাস্টমাইজ করুন</h3>
+            <button class="ccp-close" onclick="closeCardCustomize()">✕</button>
+        </div>
+        <div class="ccp-group">
+            <label class="ccp-label" data-bn="ব্যাকগ্রাউন্ড রং" data-en="Background Color">ব্যাকগ্রাউন্ড রং</label>
+            <div class="ccp-color-options" id="ccpBgColors">
+                <span class="ccp-color-dot" style="background:#111827" data-color="#111827" onclick="selectCardColor('bg','#111827',this)"></span>
+                <span class="ccp-color-dot" style="background:#1a2236" data-color="#1a2236" onclick="selectCardColor('bg','#1a2236',this)"></span>
+                <span class="ccp-color-dot" style="background:#0d1525" data-color="#0d1525" onclick="selectCardColor('bg','#0d1525',this)"></span>
+                <span class="ccp-color-dot" style="background:#1e293b" data-color="#1e293b" onclick="selectCardColor('bg','#1e293b',this)"></span>
+                <span class="ccp-color-dot" style="background:#0f172a" data-color="#0f172a" onclick="selectCardColor('bg','#0f172a',this)"></span>
+                <span class="ccp-color-dot" style="background:#ffffff;border:1px solid #ccc" data-color="#ffffff" onclick="selectCardColor('bg','#ffffff',this)"></span>
+            </div>
+        </div>
+        <div class="ccp-group">
+            <label class="ccp-label" data-bn="বর্ডার রং" data-en="Border Color">বর্ডার রং</label>
+            <div class="ccp-color-options" id="ccpBorderColors">
+                <span class="ccp-color-dot" style="background:#3b82f6" data-color="#3b82f6" onclick="selectCardColor('border','#3b82f6',this)"></span>
+                <span class="ccp-color-dot" style="background:#10b981" data-color="#10b981" onclick="selectCardColor('border','#10b981',this)"></span>
+                <span class="ccp-color-dot" style="background:#8b5cf6" data-color="#8b5cf6" onclick="selectCardColor('border','#8b5cf6',this)"></span>
+                <span class="ccp-color-dot" style="background:#ef4444" data-color="#ef4444" onclick="selectCardColor('border','#ef4444',this)"></span>
+                <span class="ccp-color-dot" style="background:#f59e0b" data-color="#f59e0b" onclick="selectCardColor('border','#f59e0b',this)"></span>
+                <span class="ccp-color-dot" style="background:#1e2d45" data-color="#1e2d45" onclick="selectCardColor('border','#1e2d45',this)"></span>
+            </div>
+        </div>
+        <div class="ccp-group">
+            <label class="ccp-label" data-bn="গোলাকার কোণ" data-en="Border Radius">গোলাকার কোণ</label>
+            <div class="ccp-size-options" id="ccpRadiusOptions">
+                <button class="ccp-size-btn" data-radius="8px" onclick="selectCardSize('radius','8px',this)">8px</button>
+                <button class="ccp-size-btn active" data-radius="16px" onclick="selectCardSize('radius','16px',this)">16px</button>
+                <button class="ccp-size-btn" data-radius="20px" onclick="selectCardSize('radius','20px',this)">20px</button>
+                <button class="ccp-size-btn" data-radius="24px" onclick="selectCardSize('radius','24px',this)">24px</button>
+            </div>
+        </div>
+        <div class="ccp-group">
+            <label class="ccp-label" data-bn="প্যাডিং" data-en="Padding">প্যাডিং</label>
+            <div class="ccp-size-options" id="ccpPaddingOptions">
+                <button class="ccp-size-btn" data-padding="12px" onclick="selectCardSize('padding','12px',this)">ছোট</button>
+                <button class="ccp-size-btn active" data-padding="20px" onclick="selectCardSize('padding','20px',this)">মাঝারি</button>
+                <button class="ccp-size-btn" data-padding="28px" onclick="selectCardSize('padding','28px',this)">বড়</button>
+            </div>
+        </div>
+        <button class="ccp-save-btn" onclick="saveCardCustomize()" data-bn="সংরক্ষণ করুন" data-en="Save">সংরক্ষণ করুন</button>
+        <button class="ccp-reset-btn" onclick="resetCardCustomize()" data-bn="ডিফল্টে ফিরিয়ে নিন" data-en="Reset to Default">ডিফল্টে ফিরিয়ে নিন</button>
+    </div>
+
+    <!-- ==================== হেডার ==================== -->
+    <header>
+        <a href="index.html" class="logo">
+            <div class="logo-mark">
+                P
+            </div>
+            <div class="logo-name">
+                Pro<span>Services</span>
+            </div>
+        </a>
+        <div class="hdr-right">
+            <!-- 📋 সকল সার্ভিস -> hideSections = true -->
+            <button class="ibtn active" data-tab="all" onclick="switchTab('all', true)">📋</button>
+            <!-- ⭐ বুকমার্ক -> hideSections = true -->
+            <button class="ibtn" data-tab="bookmarks" onclick="switchTab('bookmarks', true)">⭐ <span id="bookmarkCount">(0)</span></button>
+            <!-- 🔥 জনপ্রিয় -> hideSections = true -->
+            <button class="ibtn" data-tab="popular" onclick="switchTab('popular', true)">🔥</button>
+            <button class="ibtn" id="contactBtn" onclick="openContact()">✉️</button>
+            <button class="ibtn" id="settBtn">⚙️</button>
+            <button class="ibtn" id="menuToggleBtn" aria-label="মেনু">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <line x1="4" y1="6" x2="20" y2="6" />
+                    <line x1="4" y1="12" x2="20" y2="12" />
+                    <line x1="4" y1="18" x2="20" y2="18" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==================== সাইড মেনু ==================== -->
+    <div class="side-menu-overlay" id="sideMenuOverlay"></div>
+    <div class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+            <div class="side-menu-header-left">
+                <div class="side-menu-logo">
+                    P
+                </div>
+                <div class="side-menu-title-group">
+                    <span class="side-menu-title" data-bn="সকল সার্ভিস" data-en="All Services">সকল সার্ভিস</span>
+                    <span class="side-menu-subtitle" data-bn="১২ ক্যাটাগরি" data-en="12 Categories">১২ ক্যাটাগরি</span>
+                </div>
+            </div>
+            <button class="side-menu-close" id="sideMenuClose">✕</button>
+        </div>
+        <div class="side-menu-body">
+            <div class="side-menu-search-wrap">
+                <input type="text" class="side-menu-search" id="menuSearch" placeholder="🔍 মেনুতে সার্চ করুন..." autocomplete="off">
+            </div>
+            <div id="menuGroupsContainer"></div>
+        </div>
+        <div class="side-menu-footer">
+            <a href="#" data-bn="↓ সব সার্ভিস দেখুন" data-en="↓ View All Services">↓ সব সার্ভিস দেখুন</a>
+        </div>
+    </div>
+
+    <!-- ==================== সেটিংস প্যানেল ==================== -->
+    <div class="settings-overlay" id="settOverlay" onclick="closeSett(event)">
+        <div class="settings-panel">
+            <div class="sp-header">
+                <span style="font-size:22px">⚙️</span>
+                <h2 data-bn="সম্পূর্ণ সেটিং" data-en="Full Settings">সম্পূর্ণ সেটিং</h2>
+                <button class="sp-close" onclick="closeSett()">✕</button>
+            </div>
+            <div class="sp-body">
+                <div class="sg">
+                    <div class="sg-title" data-bn="🎨 চেহারা" data-en="🎨 Appearance">
+                        🎨 চেহারা
+                    </div>
+                    <div class="srow">
+                        <span class="s-icon">🌙</span>
+                        <div class="s-info">
+                            <div class="s-label" data-bn="ডার্ক মোড" data-en="Dark Mode">
+                                ডার্ক মোড
+                            </div>
+                        </div>
+                        <div class="s-control">
+                            <div class="tog on" id="darkTog" onclick="setTheme(this.classList.contains('on')?'light':'dark')"></div>
+                        </div>
+                    </div>
+                    <div class="srow">
+                        <span class="s-icon">🎨</span>
+                        <div class="s-info">
+                            <div class="s-label" data-bn="অ্যাকসেন্ট রং" data-en="Accent Color">
+                                অ্যাকসেন্ট রং
+                            </div>
+                        </div>
+                        <div class="s-control">
+                            <div class="accent-swatches">
+                                <div class="swatch sw-blue active" onclick="setAccent('blue',this)"></div>
+                                <div class="swatch sw-purple" onclick="setAccent('purple',this)"></div>
+                                <div class="swatch sw-green" onclick="setAccent('green',this)"></div>
+                                <div class="swatch sw-red" onclick="setAccent('red',this)"></div>
+                                <div class="swatch sw-orange" onclick="setAccent('orange',this)"></div>
+                                <div class="swatch sw-teal" onclick="setAccent('teal',this)"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="srow">
+                        <span class="s-icon">🔤</span>
+                        <div class="s-info">
+                            <div class="s-label" data-bn="ফন্ট সাইজ" data-en="Font Size">
+                                ফন্ট সাইজ
+                            </div>
+                        </div>
+                        <div class="s-control">
+                            <select class="s-select" id="fontSizeSel" onchange="setFontSize(this.value)">
+                                <option value="sm">ছোট</option>
+                                <option value="md" selected>মাঝারি</option>
+                                <option value="lg">বড়</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="srow">
+                        <span class="s-icon">🗂️</span>
+                        <div class="s-info">
+                            <div class="s-label" data-bn="কার্ড স্টাইল" data-en="Card Style">
+                                কার্ড স্টাইল
+                            </div>
+                        </div>
+                        <div class="s-control">
+                            <select class="s-select" id="cardStyleSel" onchange="setCardStyle(this.value)">
+                                <option value="default">ডিফল্ট</option>
+                                <option value="compact">কম্প্যাক্ট</option>
+                                <option value="list">লিস্ট</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="srow">
+                        <span class="s-icon">✨</span>
+                        <div class="s-info">
+                            <div class="s-label" data-bn="অ্যানিমেশন" data-en="Animations">
+                                অ্যানিমেশন
+                            </div>
+                        </div>
+                        <div class="s-control">
+                            <div class="tog on" id="animTog" onclick="toggleAnim(this)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sg">
+                    <div class="sg-title" data-bn="🌐 ভাষা" data-en="🌐 Language">
+                        🌐 ভাষা
+                    </div>
+                    <div class="srow">
+                        <span class="s-icon">🇧🇩</span>
+                        <div class="s-info">
+                            <div class="s-label" data-bn="ইন্টারফেস ভাষা" data-en="Interface Language">
+                                ইন্টারফেস ভাষা
+                            </div>
+                        </div>
+                        <div class="s-control">
+                            <select class="s-select" id="langSel" onchange="setLang(this.value)">
+                                <option value="bn">বাংলা</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="sg">
+                    <div class="sg-title" data-bn="⚠️ রিসেট" data-en="⚠️ Reset">
+                        ⚠️ রিসেট
+                    </div>
+                    <div class="srow clickable" onclick="resetSettings()">
+                        <span class="s-icon">🔄</span>
+                        <div class="s-info">
+                            <div class="s-label" style="color:var(--danger)" data-bn="সব সেটিং রিসেট করুন" data-en="Reset All Settings">
+                                সব সেটিং রিসেট করুন
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== টোস্ট নোটিফিকেশন কন্টেইনার ==================== -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ==================== সার্চ সেকশন (সবসময় দৃশ্যমান) ==================== -->
+    <section class="search-section" id="searchSection">
+        <div class="search-container">
+            <div class="search-wrapper">
+                <span class="search-input-icon">🔍</span>
+                <input type="text" class="search-input" id="mainSearch" placeholder="সার্ভিস খুঁজুন... (Ctrl+K)" autocomplete="off">
+                <button class="search-clear-btn" id="searchClearBtn">✕</button>
+                <span class="search-divider"></span>
+                <button class="search-submit" id="searchSubmitBtn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                    <span class="btn-text" data-bn="খুঁজুন" data-en="Search">খুঁজুন</span>
+                </button>
+            </div>
+            <!-- সার্চ সুজেস্টশন (সার্চ করলে লুকিয়ে যাবে) -->
+            <div class="search-suggestions" id="searchSuggestions">
+                <span class="search-suggestion-tag" onclick="quickSearch('PDF')">📄 PDF</span>
+                <span class="search-suggestion-tag" onclick="quickSearch('Image')">🖼️ Image</span>
+                <span class="search-suggestion-tag" onclick="quickSearch('Video')">🎬 Video</span>
+                <span class="search-suggestion-tag" onclick="quickSearch('Audio')">🎵 Audio</span>
+                <span class="search-suggestion-tag" onclick="quickSearch('QR')">📱 QR</span>
+                <span class="search-suggestion-tag" onclick="quickSearch('Text')">📝 Text</span>
+            </div>
+            <!-- সার্চ ইনফো বার (খালি থাকলে লুকানো) -->
+            <div class="search-info-bar" id="searchInfoBar">
+                <span class="search-info-text" id="searchInfoText"></span>
+                <button class="search-info-clear" id="searchInfoClear">✕ ক্লিয়ার</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== মেইন কন্টেন্ট ==================== -->
+    <main id="mainContent">
+        <!-- হিরো সেকশন (সার্চ করলে লুকিয়ে যাবে) -->
+        <section class="hero" id="heroSection">
+            <div class="hero-badge">
+                ✨ <span data-bn="সকল ডিজিটাল সার্ভিস এক জায়গায়" data-en="All Digital Services in One Place">সকল ডিজিটাল সার্ভিস এক জায়গায়</span>
+            </div>
+        </section>
+
+        <!-- প্যানেল সেকশন (সার্চ করলে লুকিয়ে যাবে) -->
+        <div class="sec" id="panelsWrap">
+            <div id="panelsContainer"></div>
+        </div>
+
+        <!-- কার্ড সেকশন (সবসময় দৃশ্যমান) -->
+        <div class="cards-section" id="cardsSection">
+            <div class="tabs-container" id="tabsContainer">
+                <button class="tab-btn active" data-tab="all" onclick="switchTab('all')">📋 সকল সার্ভিস</button>
+                <button class="tab-btn" data-tab="bookmarks" onclick="switchTab('bookmarks')">⭐ বুকমার্ক</button>
+                <button class="tab-btn" data-tab="popular" onclick="switchTab('popular')">🔥 জনপ্রিয়</button>
+            </div>
+            <div class="cards" id="cardsGrid"></div>
+        </div>
+    </main>
+
+    <!-- ==================== টপ বাটন ==================== -->
+    <button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+    <!-- ==================== ফুটার ==================== -->
+    <footer>
+        <p>
+            © 2025 <strong>ProServices Hub</strong> — <span data-bn="সকল ডিজিটাল সার্ভিস এক জায়গায়" data-en="All Digital Services in One Place">সকল ডিজিটাল সার্ভিস এক জায়গায়</span> | Made with ❤️ for Bangladesh
+        </p>
+    </footer>
+
+    <!-- ==================== জাভাস্ক্রিপ্ট ==================== -->
+    <script>
+        /*
+         * ============================================================
+         *  ProServices Hub — সম্পূর্ণ জাভাস্ক্রিপ্ট লজিক
+         *  বাংলা কমেন্ট সহ প্রতিটি ফাংশনের কাজ বোঝানো হয়েছে
+         * ============================================================
+         */
+
+        // ---------- ১. সার্ভিস ডেটা (সকল সার্ভিসের তালিকা) ----------
+        const SERVICES = [{
+            n: "PDF Merge",
+            bn: "PDF মার্জ",
+            cat: "PDF",
+            ico: "🔗",
+            url: "pdf-services.html#merge",
+            ok: true,
+            descBn: "একাধিক PDF ফাইল একসাথে মার্জ করুন",
+            descEn: "Merge multiple PDF files together"
+        }, {
+            n: "PDF Split",
+            bn: "PDF স্প্লিট",
+            cat: "PDF",
+            ico: "✂️",
+            url: "pdf-services.html#split",
+            ok: true,
+            descBn: "PDF ফাইলকে আলাদা করুন",
+            descEn: "Split PDF files into separate pages"
+        }, {
+            n: "PDF Compress",
+            bn: "PDF কম্প্রেস",
+            cat: "PDF",
+            ico: "🗜️",
+            url: "pdf-services.html#compress",
+            ok: true,
+            descBn: "PDF ফাইলের সাইজ কমান",
+            descEn: "Reduce PDF file size"
+        }, {
+            n: "PDF to Word",
+            cat: "PDF",
+            ico: "🔄",
+            url: "pdf-services.html#convert",
+            ok: true,
+            descBn: "PDF কে Word এ রূপান্তর করুন",
+            descEn: "Convert PDF to Word document"
+        }, {
+            n: "Word to PDF",
+            cat: "PDF",
+            ico: "📝",
+            url: "pdf-services.html#word2pdf",
+            ok: true,
+            descBn: "Word ফাইলকে PDF এ কনভার্ট করুন",
+            descEn: "Convert Word files to PDF"
+        }, {
+            n: "PDF Protect",
+            bn: "PDF প্রটেক্ট",
+            cat: "PDF",
+            ico: "🔒",
+            url: "pdf-services.html#protect",
+            ok: true,
+            descBn: "পাসওয়ার্ড দিয়ে PDF সুরক্ষিত করুন",
+            descEn: "Protect PDF with password"
+        }, {
+            n: "PDF Watermark",
+            bn: "PDF ওয়াটারমার্ক",
+            cat: "PDF",
+            ico: "💧",
+            url: "pdf-services.html#watermark",
+            ok: true,
+            descBn: "PDF এ ওয়াটারমার্ক যোগ করুন",
+            descEn: "Add watermark to PDF"
+        }, {
+            n: "PDF OCR",
+            cat: "PDF",
+            ico: "🔍",
+            url: "pdf-services.html#ocr",
+            ok: true,
+            descBn: "PDF থেকে টেক্সট এক্সট্রাক্ট করুন",
+            descEn: "Extract text from PDF using OCR"
+        }, {
+            n: "Image Resize",
+            cat: "Image",
+            ico: "📐",
+            url: "image-services.html#resize",
+            ok: true,
+            descBn: "ছবির সাইজ পরিবর্তন করুন",
+            descEn: "Resize images easily"
+        }, {
+            n: "Image Convert",
+            cat: "Image",
+            ico: "🔄",
+            url: "image-services.html#convert",
+            ok: true,
+            descBn: "ছবির ফরম্যাট পরিবর্তন করুন",
+            descEn: "Convert image formats"
+        }, {
+            n: "Image Compress",
+            cat: "Image",
+            ico: "🗜️",
+            url: "image-services.html#compress",
+            ok: true,
+            descBn: "ছবির সাইজ কমান",
+            descEn: "Compress image file size"
+        }, {
+            n: "BG Remove",
+            bn: "ব্যাকগ্রাউন্ড রিমুভ",
+            cat: "Image",
+            ico: "🎭",
+            url: "image-services.html#bgremove",
+            ok: true,
+            descBn: "ছবির ব্যাকগ্রাউন্ড রিমুভ করুন",
+            descEn: "Remove background from image"
+        }, {
+            n: "Image Crop",
+            cat: "Image",
+            ico: "✂️",
+            url: "image-services.html#crop",
+            ok: true,
+            descBn: "ছবি ক্রপ করুন",
+            descEn: "Crop images precisely"
+        }, {
+            n: "Image Watermark",
+            cat: "Image",
+            ico: "💧",
+            url: "image-services.html#watermark",
+            ok: true,
+            descBn: "ছবিতে ওয়াটারমার্ক যোগ করুন",
+            descEn: "Add watermark to images"
+        }, {
+            n: "Photo Enhance",
+            bn: "ফটো এনহ্যান্স",
+            cat: "Image",
+            ico: "✨",
+            url: "image-services.html#enhance",
+            ok: true,
+            descBn: "ছবির কোয়ালিটি উন্নত করুন",
+            descEn: "Enhance photo quality"
+        }, {
+            n: "Photo Collage",
+            bn: "ফটো কোলাজ",
+            cat: "Image",
+            ico: "🖼",
+            url: "image-services.html#collage",
+            ok: true,
+            descBn: "একাধিক ছবি দিয়ে কোলাজ তৈরি করুন",
+            descEn: "Create photo collages"
+        }, {
+            n: "Video Convert",
+            bn: "ভিডিও কনভার্ট",
+            cat: "Video",
+            ico: "🔄",
+            url: "#video",
+            ok: false,
+            descBn: "ভিডিও ফরম্যাট পরিবর্তন করুন",
+            descEn: "Convert video formats"
+        }, {
+            n: "Video Trim",
+            bn: "ভিডিও ট্রিম",
+            cat: "Video",
+            ico: "✂️",
+            url: "#video",
+            ok: false,
+            descBn: "ভিডিও ট্রিম করুন",
+            descEn: "Trim video clips"
+        }, {
+            n: "Video Compress",
+            bn: "ভিডিও কম্প্রেস",
+            cat: "Video",
+            ico: "🗜️",
+            url: "#video",
+            ok: false,
+            descBn: "ভিডিওর সাইজ কমান",
+            descEn: "Compress video file size"
+        }, {
+            n: "Audio Extract",
+            bn: "অডিও এক্সট্রাক্ট",
+            cat: "Video",
+            ico: "🔊",
+            url: "#video",
+            ok: false,
+            descBn: "ভিডিও থেকে অডিও বের করুন",
+            descEn: "Extract audio from video"
+        }, {
+            n: "Video to GIF",
+            cat: "Video",
+            ico: "📸",
+            url: "#video",
+            ok: false,
+            descBn: "ভিডিওকে GIF এ রূপান্তর করুন",
+            descEn: "Convert video to GIF"
+        }, {
+            n: "Video Watermark",
+            bn: "ভিডিও ওয়াটারমার্ক",
+            cat: "Video",
+            ico: "💧",
+            url: "#video",
+            ok: false,
+            descBn: "ভিডিওতে ওয়াটারমার্ক যোগ করুন",
+            descEn: "Add watermark to video"
+        }, {
+            n: "Audio Convert",
+            bn: "অডিও কনভার্ট",
+            cat: "Audio",
+            ico: "🔄",
+            url: "#audio",
+            ok: false,
+            descBn: "অডিও ফরম্যাট পরিবর্তন করুন",
+            descEn: "Convert audio formats"
+        }, {
+            n: "Audio Trim",
+            bn: "অডিও ট্রিম",
+            cat: "Audio",
+            ico: "✂️",
+            url: "#audio",
+            ok: false,
+            descBn: "অডিও ট্রিম করুন",
+            descEn: "Trim audio clips"
+        }, {
+            n: "Audio Merge",
+            bn: "অডিও মার্জ",
+            cat: "Audio",
+            ico: "🔗",
+            url: "#audio",
+            ok: false,
+            descBn: "একাধিক অডিও মার্জ করুন",
+            descEn: "Merge audio files"
+        }, {
+            n: "Audio Compress",
+            bn: "অডিও কম্প্রেস",
+            cat: "Audio",
+            ico: "🗜️",
+            url: "#audio",
+            ok: false,
+            descBn: "অডিও সাইজ কমান",
+            descEn: "Compress audio file size"
+        }, {
+            n: "Audio to Text",
+            bn: "অডিও টু টেক্সট",
+            cat: "Audio",
+            ico: "📝",
+            url: "#audio",
+            ok: false,
+            descBn: "অডিও থেকে টেক্সট তৈরি করুন",
+            descEn: "Convert audio to text"
+        }, {
+            n: "QR Generator",
+            bn: "QR জেনারেটর",
+            cat: "QR",
+            ico: "📱",
+            url: "#qr",
+            ok: true,
+            descBn: "কাস্টম QR কোড তৈরি করুন",
+            descEn: "Generate custom QR codes"
+        }, {
+            n: "QR Scanner",
+            bn: "QR স্ক্যানার",
+            cat: "QR",
+            ico: "📷",
+            url: "#qr",
+            ok: true,
+            descBn: "QR কোড স্ক্যান করুন",
+            descEn: "Scan QR codes"
+        }, {
+            n: "Barcode Generator",
+            bn: "বারকোড জেনারেটর",
+            cat: "QR",
+            ico: "📊",
+            url: "#qr",
+            ok: true,
+            descBn: "বারকোড তৈরি করুন",
+            descEn: "Generate barcodes"
+        }, {
+            n: "Custom QR Art",
+            bn: "কাস্টম QR আর্ট",
+            cat: "QR",
+            ico: "🎨",
+            url: "#qr",
+            ok: true,
+            descBn: "আর্টিস্টিক QR কোড তৈরি করুন",
+            descEn: "Create artistic QR codes"
+        }, {
+            n: "Text Translate",
+            bn: "টেক্সট অনুবাদ",
+            cat: "Text",
+            ico: "🌐",
+            url: "#text",
+            ok: true,
+            descBn: "টেক্সট অনুবাদ করুন",
+            descEn: "Translate text"
+        }, {
+            n: "Word Count",
+            bn: "শব্দ গণনা",
+            cat: "Text",
+            ico: "🔢",
+            url: "#text",
+            ok: true,
+            descBn: "শব্দ ও অক্ষর গণনা করুন",
+            descEn: "Count words and characters"
+        }, {
+            n: "Text Encrypt",
+            bn: "টেক্সট এনক্রিপ্ট",
+            cat: "Text",
+            ico: "🔒",
+            url: "#text",
+            ok: true,
+            descBn: "টেক্সট এনক্রিপ্ট ও ডিক্রিপ্ট করুন",
+            descEn: "Encrypt and decrypt text"
+        }, {
+            n: "Format Convert",
+            bn: "ফরম্যাট কনভার্ট",
+            cat: "Text",
+            ico: "📋",
+            url: "#text",
+            ok: true,
+            descBn: "টেক্সট ফরম্যাট পরিবর্তন করুন",
+            descEn: "Convert text formats"
+        }, {
+            n: "Case Changer",
+            bn: "কেস চেঞ্জার",
+            cat: "Text",
+            ico: "🔤",
+            url: "#text",
+            ok: true,
+            descBn: "লোয়ার/আপার কেস পরিবর্তন করুন",
+            descEn: "Change text case"
+        }, {
+            n: "Font Styler",
+            bn: "ফন্ট স্টাইলার",
+            cat: "Text",
+            ico: "🎨",
+            url: "#text",
+            ok: true,
+            descBn: "টেক্সট ফন্ট স্টাইল করুন",
+            descEn: "Style your text fonts"
+        }, {
+            n: "Password Generator",
+            bn: "পাসওয়ার্ড জেনারেটর",
+            cat: "Security",
+            ico: "🔑",
+            url: "#passwd",
+            ok: true,
+            descBn: "শক্তিশালী পাসওয়ার্ড তৈরি করুন",
+            descEn: "Generate strong passwords"
+        }, {
+            n: "Hash Generator",
+            bn: "হ্যাশ জেনারেটর",
+            cat: "Security",
+            ico: "🔐",
+            url: "#hash",
+            ok: true,
+            descBn: "MD5, SHA হ্যাশ তৈরি করুন",
+            descEn: "Generate MD5, SHA hashes"
+        }, {
+            n: "JSON Tools",
+            cat: "Dev",
+            ico: "📋",
+            url: "#json",
+            ok: true,
+            descBn: "JSON ফরম্যাট ও ভ্যালিডেট করুন",
+            descEn: "Format and validate JSON"
+        }, {
+            n: "Base64 Encoder",
+            cat: "Dev",
+            ico: "🔢",
+            url: "#base64",
+            ok: true,
+            descBn: "Base64 এনকোড ও ডিকোড করুন",
+            descEn: "Encode and decode Base64"
+        }, {
+            n: "Color Picker",
+            bn: "কালার পিকার",
+            cat: "Design",
+            ico: "🎨",
+            url: "#color",
+            ok: false,
+            descBn: "রং নির্বাচন ও কোড জেনারেট করুন",
+            descEn: "Pick colors and generate codes"
+        }, {
+            n: "Financial Calculator",
+            bn: "আর্থিক ক্যালকুলেটর",
+            cat: "Calculator",
+            ico: "💰",
+            url: "#calc",
+            ok: true,
+            descBn: "লোন, EMI, সুদ হিসাব করুন",
+            descEn: "Calculate loans, EMI, interest"
+        }, {
+            n: "Unit Converter",
+            bn: "ইউনিট কনভার্টার",
+            cat: "Calculator",
+            ico: "📏",
+            url: "#calc",
+            ok: true,
+            descBn: "বিভিন্ন ইউনিট কনভার্ট করুন",
+            descEn: "Convert various units"
+        },];
+
+        // ---------- ২. মেনু গ্রুপ ডেটা (সাইড মেনুর জন্য) ----------
+        const MENU_GROUPS = [{
+            id: 'pdf',
+            icon: '📄',
+            iconBg: 'rgba(239,68,68,0.15)',
+            nameBn: 'PDF সার্ভিস',
+            nameEn: 'PDF Services',
+            descBn: 'মার্জ, স্প্লিট, কনভার্ট',
+            descEn: 'Merge, Split, Convert',
+            services: SERVICES.filter(s => s.cat === 'PDF')
+        }, {
+            id: 'image',
+            icon: '🖼️',
+            iconBg: 'rgba(59,130,246,0.15)',
+            nameBn: 'Image সার্ভিস',
+            nameEn: 'Image Services',
+            descBn: 'রিসাইজ, কনভার্ট, এডিট',
+            descEn: 'Resize, Convert, Edit',
+            services: SERVICES.filter(s => s.cat === 'Image')
+        }, {
+            id: 'video',
+            icon: '🎬',
+            iconBg: 'rgba(168,85,247,0.15)',
+            nameBn: 'Video সার্ভিস',
+            nameEn: 'Video Services',
+            descBn: 'এডিট, কনভার্ট, কম্প্রেস',
+            descEn: 'Edit, Convert, Compress',
+            services: SERVICES.filter(s => s.cat === 'Video')
+        }, {
+            id: 'audio',
+            icon: '🎵',
+            iconBg: 'rgba(16,185,129,0.15)',
+            nameBn: 'Audio সার্ভিস',
+            nameEn: 'Audio Services',
+            descBn: 'কনভার্ট, ট্রিম, মার্জ',
+            descEn: 'Convert, Trim, Merge',
+            services: SERVICES.filter(s => s.cat === 'Audio')
+        }, {
+            id: 'text',
+            icon: '📝',
+            iconBg: 'rgba(6,182,212,0.15)',
+            nameBn: 'Text Tools',
+            nameEn: 'Text Tools',
+            descBn: 'অনুবাদ, ফরম্যাট, কাউন্ট',
+            descEn: 'Translate, Format, Count',
+            services: SERVICES.filter(s => s.cat === 'Text')
+        }, {
+            id: 'qr',
+            icon: '📱',
+            iconBg: 'rgba(249,115,22,0.15)',
+            nameBn: 'QR & Barcode',
+            nameEn: 'QR & Barcode',
+            descBn: 'জেনারেট, স্ক্যান, কাস্টম',
+            descEn: 'Generate, Scan, Custom',
+            services: SERVICES.filter(s => s.cat === 'QR')
+        }, {
+            id: 'other',
+            icon: '🔧',
+            iconBg: 'rgba(100,116,139,0.15)',
+            nameBn: 'অন্যান্য টুলস',
+            nameEn: 'Other Tools',
+            descBn: 'সিকিউরিটি, ডেভ, ক্যালকুলেটর',
+            descEn: 'Security, Dev, Calculator',
+            services: SERVICES.filter(s => ['Security', 'Dev', 'Design', 'Calculator'].includes(s.cat))
+        }];
+
+        // ---------- ৩. প্যানেল গ্রুপ ডেটা (হোম পেজের প্যানেলের জন্য) ----------
+        const PANEL_GROUPS = [{
+            id: 'p-pdf',
+            icon: '📄',
+            iconBg: 'rgba(239,68,68,0.15)',
+            nameBn: 'PDF সার্ভিস',
+            nameEn: 'PDF Services',
+            subBn: 'মার্জ · স্প্লিট · কনভার্ট · কম্প্রেস',
+            subEn: 'Merge · Split · Convert · Compress',
+            services: SERVICES.filter(s => s.cat === 'PDF')
+        }, {
+            id: 'p-img',
+            icon: '🖼️',
+            iconBg: 'rgba(59,130,246,0.15)',
+            nameBn: 'Image সার্ভিস',
+            nameEn: 'Image Services',
+            subBn: 'রিসাইজ · কনভার্ট · BG রিমুভ',
+            subEn: 'Resize · Convert · BG Remove',
+            services: SERVICES.filter(s => s.cat === 'Image')
+        }, {
+            id: 'p-vid',
+            icon: '🎬',
+            iconBg: 'rgba(168,85,247,0.15)',
+            nameBn: 'Video সার্ভিস',
+            nameEn: 'Video Services',
+            subBn: 'কনভার্ট · ট্রিম · কম্প্রেস',
+            subEn: 'Convert · Trim · Compress',
+            services: SERVICES.filter(s => s.cat === 'Video')
+        }, {
+            id: 'p-aud',
+            icon: '🎵',
+            iconBg: 'rgba(16,185,129,0.15)',
+            nameBn: 'Audio সার্ভিস',
+            nameEn: 'Audio Services',
+            subBn: 'কনভার্ট · ট্রিম · মার্জ',
+            subEn: 'Convert · Trim · Merge',
+            services: SERVICES.filter(s => s.cat === 'Audio')
+        }, {
+            id: 'p-text',
+            icon: '📝',
+            iconBg: 'rgba(6,182,212,0.15)',
+            nameBn: 'Text Tools',
+            nameEn: 'Text Tools',
+            subBn: 'অনুবাদ · ফরম্যাট · কাউন্ট',
+            subEn: 'Translate · Format · Count',
+            services: SERVICES.filter(s => s.cat === 'Text')
+        }, {
+            id: 'p-qr',
+            icon: '📱',
+            iconBg: 'rgba(249,115,22,0.15)',
+            nameBn: 'QR & Barcode',
+            nameEn: 'QR & Barcode',
+            subBn: 'জেনারেট · স্ক্যান · কাস্টম',
+            subEn: 'Generate · Scan · Custom',
+            services: SERVICES.filter(s => s.cat === 'QR')
+        },];
+
+        // ---------- ৪. গ্লোবাল ভেরিয়েবল ----------
+        let lang = localStorage.getItem('lang') || 'bn'; // ভাষা (bn/en)
+        let openPanel = null; // বর্তমানে খোলা প্যানেলের ID
+        let currentTab = 'all'; // বর্তমান ট্যাব (all/bookmarks/popular)
+        let bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]'); // বুকমার্ক করা সার্ভিসের নামের তালিকা
+        let searchHistory = JSON.parse(localStorage.getItem('searchHistory') || '[]'); // সার্চ ইতিহাস (বর্তমানে ব্যবহার করা হয়নি)
+        let viewCounts = JSON.parse(localStorage.getItem('viewCounts') || '{}'); // প্রতিটি সার্ভিসের ভিউ কাউন্ট
+        let ratings = JSON.parse(localStorage.getItem('ratings') || '{}'); // প্রতিটি সার্ভিসের রেটিং
+        let cardCustomizations = JSON.parse(localStorage.getItem('cardCustomizations') || '{}'); // কার্ড কাস্টমাইজেশন ডেটা
+        let customizeTarget = null; // বর্তমানে কাস্টমাইজ করা হচ্ছে এমন সার্ভিসের নাম
+        let tempCustomization = {}; // অস্থায়ী কাস্টমাইজেশন ডেটা
+        let currentModalService = null; // মডালে দেখানো সার্ভিস
+
+        // টাচ ইভেন্টের জন্য ভেরিয়েবল
+        let touchStartTime = 0,
+        touchStartX = 0,
+        touchStartY = 0,
+        touchMoved = false,
+        longPressTimer = null;
+        const LONG_PRESS_DURATION = 500; // দীর্ঘ প্রেসের সময় (মিলিসেকেন্ড)
+
+        // ---------- ৫. মডাল (পপআপ) ফাংশন ----------
+        // সার্ভিস মডাল খোলা
+        function openServiceModal(serviceName) {
+            const service = SERVICES.find(s => s.n === serviceName);
+            if (!service) return;
+            currentModalService = service;
+            incrementView(service.n); // ভিউ বাড়ানো
+
+            const name = lang === 'en' ? service.n: (service.bn || service.n);
+            const desc = lang === 'en' ? (service.descEn || `Professional ${service.cat} tools`): (service.descBn ||
+                `পেশাদার ${service.cat} টুলস`);
+            const isActive = service.ok;
+            const rating = getRating(service.n);
+            const viewCount = viewCounts[service.n] || 0;
+            const bm = isBookmarked(service.n);
+
+            document.getElementById('smIcon').textContent = service.ico;
+            document.getElementById('smTitle').textContent = name;
+            document.getElementById('smCategory').textContent = service.cat;
+            document.getElementById('smDescription').textContent = desc;
+
+            const statusRow = document.getElementById('smStatusRow');
+            const statusDot = document.getElementById('smStatusDot');
+            const statusText = document.getElementById('smStatusText');
+            if (isActive) {
+                statusRow.className = 'sm-status-row active-status';
+                statusDot.className = 'sm-status-dot active-dot';
+                statusText.textContent = lang === 'en' ? '✅ Active': '✅ সক্রিয়';
+            } else {
+                statusRow.className = 'sm-status-row soon-status';
+                statusDot.className = 'sm-status-dot soon-dot';
+                statusText.textContent = lang === 'en' ? '⏳ Coming Soon': '⏳ শীঘ্রই';
+            }
+
+            document.getElementById('smPrimaryAction').href = service.url;
+            document.getElementById('smPrimaryAction').style.display = isActive ? '': 'none';
+            document.getElementById('smBookmarkIcon').textContent = bm ? '⭐': '☆';
+            document.getElementById('smViewCount').textContent = `👁️ ${viewCount} ${lang === 'en' ? 'views': 'বার'}`;
+
+            let starsHtml = '';
+            for (let i = 1; i <= 5; i++) {
+                starsHtml += `<span class="star${i <= rating ? ' active': ''}" onclick="modalRate(${i})">★</span>`;
+            }
+            document.getElementById('smRatingStars').innerHTML = starsHtml;
+
+            document.getElementById('serviceModalBackdrop').classList.add('visible');
+            document.body.style.overflow = 'hidden';
+            if (navigator.vibrate) navigator.vibrate(20);
+        }
+
+        // মডাল বন্ধ করা
+        function closeServiceModal() {
+            document.getElementById('serviceModalBackdrop').classList.remove('visible');
+            document.body.style.overflow = '';
+            currentModalService = null;
+            renderCards(document.getElementById('mainSearch').value);
+        }
+
+        // সার্ভিসে যাওয়া (ট্যাপ করলে)
+        function goToService(serviceName) {
+            const service = SERVICES.find(s => s.n === serviceName);
+            if (!service) return;
+            incrementView(service.n);
+            if (service.ok) window.location.href = service.url;
+            else openServiceModal(serviceName);
+        }
+
+        // টাচ স্টার্ট (লং প্রেস শনাক্ত করার জন্য)
+        function handleTouchStart(e, serviceName) {
+            if (e.target.closest('.card-bookmark') || e.target.closest('.card-customize-btn') || e.target.closest('.star'))
+                return;
+            touchStartTime = Date.now();
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            touchMoved = false;
+            clearTimeout(longPressTimer);
+            longPressTimer = setTimeout(() => {
+                if (!touchMoved) openServiceModal(serviceName);
+            },
+                LONG_PRESS_DURATION);
+        }
+
+        // টাচ মুভ (স্ক্রল বা ড্র্যাগ)
+        function handleTouchMove(e) {
+            if (Math.abs(e.touches[0].clientX - touchStartX) > 10 || Math.abs(e.touches[0].clientY - touchStartY) > 10) {
+                touchMoved = true;
+                clearTimeout(longPressTimer);
+            }
+        }
+
+        // টাচ এন্ড (ট্যাপ বা লং প্রেস শেষ)
+        function handleTouchEnd(e, serviceName) {
+            clearTimeout(longPressTimer);
+            if (e.target.closest('.card-bookmark') || e.target.closest('.card-customize-btn') || e.target.closest('.star'))
+                return;
+            if (!touchMoved && (Date.now() - touchStartTime) < LONG_PRESS_DURATION) {
+                e.preventDefault();
+                goToService(serviceName);
+            }
+        }
+
+        // কার্ড ক্লিক (ডেস্কটপের জন্য)
+        function handleCardClick(serviceName, event) {
+            if (event.target.closest('.card-bookmark') || event.target.closest('.card-customize-btn') || event.target.closest(
+                '.star')) return;
+            if (!('ontouchstart' in window)) goToService(serviceName);
+        }
+
+        // মডাল ব্যাকড্রপে ক্লিক করলে বন্ধ
+        document.getElementById('serviceModalBackdrop').addEventListener('click', e => {
+            if (e.target === document.getElementById('serviceModalBackdrop')) closeServiceModal();
+        });
+
+        // Escape কী চাপলে মডাল বন্ধ
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && document.getElementById('serviceModalBackdrop').classList.contains('visible'))
+                closeServiceModal();
+        });
+
+        // মডালের ভেতরের বাটন ফাংশন
+        function modalToggleBookmark() {
+            if (currentModalService) {
+                toggleBookmark(currentModalService.n);
+                const bm = isBookmarked(currentModalService.n);
+                document.getElementById('smBookmarkIcon').textContent = bm ? '⭐': '☆';
+            }
+        }
+
+        function modalCustomize() {
+            if (currentModalService) {
+                const sn = currentModalService.n;
+                closeServiceModal();
+                setTimeout(() => openCardCustomize(sn), 300);
+            }
+        }
+
+        function modalShare() {
+            if (currentModalService) shareService(lang === 'en' ? currentModalService.n: (currentModalService.bn ||
+                currentModalService.n), currentModalService.url);
+        }
+
+        function modalCopyLink() {
+            if (currentModalService) copyToClipboard(currentModalService.url);
+        }
+
+        function modalRate(stars) {
+            if (currentModalService) {
+                rateService(currentModalService.n, stars);
+                let h = '';
+                for (let i = 1; i <= 5; i++) h += `<span class="star${i <= stars ? ' active': ''}" onclick="modalRate(${i})">★</span>`;
+                document.getElementById('smRatingStars').innerHTML = h;
+            }
+        }
+
+        // ---------- ৬. কার্ড কাস্টমাইজ ফাংশন ----------
+        // কাস্টমাইজ প্যানেল খোলা
+        function openCardCustomize(name) {
+            customizeTarget = name;
+            tempCustomization = {
+                ...(cardCustomizations[name] || {})
+            };
+            document.getElementById('cardCustomizeBackdrop').classList.add('visible');
+            document.getElementById('cardCustomizePanel').classList.add('visible');
+            document.body.style.overflow = 'hidden';
+            document.querySelectorAll('#ccpBgColors .ccp-color-dot').forEach(d => d.classList.toggle('active', d.dataset
+                .color === (tempCustomization.bg || '#111827')));
+            document.querySelectorAll('#ccpBorderColors .ccp-color-dot').forEach(d => d.classList.toggle('active', d.dataset
+                .color === (tempCustomization.border || '#1e2d45')));
+            document.querySelectorAll('#ccpRadiusOptions .ccp-size-btn').forEach(b => b.classList.toggle('active', b
+                .dataset.radius === (tempCustomization.radius || '16px')));
+            document.querySelectorAll('#ccpPaddingOptions .ccp-size-btn').forEach(b => b.classList.toggle('active', b
+                .dataset.padding === (tempCustomization.padding || '20px')));
+        }
+
+        // কাস্টমাইজ প্যানেল বন্ধ
+        function closeCardCustomize() {
+            document.getElementById('cardCustomizeBackdrop').classList.remove('visible');
+            document.getElementById('cardCustomizePanel').classList.remove('visible');
+            document.body.style.overflow = '';
+            customizeTarget = null;
+            tempCustomization = {};
+        }
+
+        // রং নির্বাচন
+        function selectCardColor(t, c, el) {
+            tempCustomization[t] = c;
+            const id = t === 'bg' ? 'ccpBgColors': 'ccpBorderColors';
+            document.querySelectorAll(`#${id} .ccp-color-dot`).forEach(d => d.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        // সাইজ নির্বাচন (রেডিয়াস/প্যাডিং)
+        function selectCardSize(t, v, el) {
+            tempCustomization[t] = v;
+            const id = t === 'radius' ? 'ccpRadiusOptions': 'ccpPaddingOptions';
+            document.querySelectorAll(`#${id} .ccp-size-btn`).forEach(b => b.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        // কাস্টমাইজ সংরক্ষণ
+        function saveCardCustomize() {
+            if (!customizeTarget) return;
+            cardCustomizations[customizeTarget] = {
+                ...tempCustomization
+            };
+            localStorage.setItem('cardCustomizations', JSON.stringify(cardCustomizations));
+            closeCardCustomize();
+            renderCards(document.getElementById('mainSearch').value);
+            showToast(`কাস্টমাইজ সম্পন্ন! 🎨`, 'success');
+        }
+
+        // কাস্টমাইজ রিসেট
+        function resetCardCustomize() {
+            if (!customizeTarget) return;
+            delete cardCustomizations[customizeTarget];
+            localStorage.setItem('cardCustomizations', JSON.stringify(cardCustomizations));
+            closeCardCustomize();
+            renderCards(document.getElementById('mainSearch').value);
+            showToast('ডিফল্টে ফিরেছে', 'info');
+        }
+
+        // ব্যাকড্রপে ক্লিক করলে বন্ধ
+        document.getElementById('cardCustomizeBackdrop').addEventListener('click', closeCardCustomize);
+
+        // ---------- ৭. হেল্পার ফাংশন ----------
+        // ভিউ ইনক্রিমেন্ট
+        function incrementView(n) {
+            viewCounts[n] = (viewCounts[n] || 0) + 1;
+            localStorage.setItem('viewCounts', JSON.stringify(viewCounts));
+        }
+
+        // জনপ্রিয় সার্ভিস (ভিউ অনুযায়ী)
+        function getPopularServices(l = 10) {
+            return [...SERVICES].sort((a, b) => (viewCounts[b.n] || 0) - (viewCounts[a.n] || 0)).slice(0, l);
+        }
+
+        // রেটিং দেওয়া
+        function rateService(n, r) {
+            ratings[n] = r;
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+            renderCards(document.getElementById('mainSearch').value);
+            showToast(`${r}⭐ রেটিং!`, 'success');
+        }
+
+        // রেটিং পাওয়া
+        function getRating(n) {
+            return ratings[n] || 0;
+        }
+
+        // তারকা রেন্ডার
+        function renderStars(name, r) {
+            let h = '<div class="card-rating" onclick="event.preventDefault();event.stopPropagation()">';
+            for (let i = 1; i <= 5; i++) h += `<span class="star${i <= r ? ' active': ''}" onclick="event.preventDefault();event.stopPropagation();rateService('${name.replace(/'/g, "\\'")}',${i})">★</span>`;
+            return h + '</div>';
+        }
+
+        // শেয়ার করা
+        async function shareService(name, url) {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: name, text: `ProServices Hub: ${name}`, url
+                    });
+                } catch (e) {}
+            } else copyToClipboard(url);
+        }
+
+        // ক্লিপবোর্ডে কপি
+        function copyToClipboard(t) {
+            navigator.clipboard.writeText(t).then(() => showToast('লিংক কপি হয়েছে! 📋', 'success')).catch(() => showToast(
+                'কপি ব্যর্থ', 'error'));
+        }
+
+        // টোস্ট নোটিফিকেশন
+        function showToast(msg, type = 'info') {
+            const c = document.getElementById('toastContainer');
+            const t = document.createElement('div');
+            t.className = `toast toast-${type}`;
+            t.textContent = msg;
+            c.appendChild(t);
+            setTimeout(() => t.remove(), 3000);
+        }
+
+        // বুকমার্ক টগল
+        function toggleBookmark(name) {
+            if (bookmarks.includes(name)) {
+                bookmarks = bookmarks.filter(b => b !== name);
+                showToast('বুকমার্ক রিমুভ', 'warning');
+            } else {
+                bookmarks.push(name);
+                showToast('বুকমার্ক! ⭐', 'success');
+            }
+            localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+            document.getElementById('bookmarkCount').textContent = `(${bookmarks.length})`;
+            renderCards(document.getElementById('mainSearch').value);
+            renderMenuGroups(document.getElementById('menuSearch').value);
+        }
+
+        // বুকমার্ক চেক
+        function isBookmarked(n) {
+            return bookmarks.includes(n);
+        }
+
+        // ক্যাটাগরি অনুযায়ী আইকন রং
+        function getCatColorClass(c) {
+            const m = {
+                'PDF': 'ic-red',
+                'Image': 'ic-blue',
+                'Video': 'ic-purple',
+                'Audio': 'ic-green',
+                'QR': 'ic-orange',
+                'Text': 'ic-teal',
+                'Security': 'ic-indigo',
+                'Dev': 'ic-cyan',
+                'Design': 'ic-pink',
+                'Calculator': 'ic-yellow'
+            };
+            return m[c] || 'ic-blue';
+        }
+
+        // ---------- ৮. সাইড মেনু ফাংশন ----------
+        const sideMenu = document.getElementById('sideMenu');
+        const sideMenuOverlay = document.getElementById('sideMenuOverlay');
+        const menuToggleBtn = document.getElementById('menuToggleBtn');
+        const menuSearch = document.getElementById('menuSearch');
+
+        // সাইড মেনু খোলা
+        function openSideMenu() {
+            sideMenu.classList.add('open');
+            sideMenuOverlay.classList.add('active');
+            menuToggleBtn.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // সাইড মেনু বন্ধ
+        function closeSideMenu() {
+            sideMenu.classList.remove('open');
+            sideMenuOverlay.classList.remove('active');
+            menuToggleBtn.classList.remove('active');
+            document.body.style.overflow = '';
+            menuSearch.value = '';
+            renderMenuGroups();
+        }
+
+        // টগল বাটন
+        menuToggleBtn.addEventListener('click', e => {
+            e.stopPropagation();
+            sideMenu.classList.contains('open') ? closeSideMenu(): openSideMenu();
+        });
+        sideMenuOverlay.addEventListener('click', closeSideMenu);
+        document.getElementById('sideMenuClose').addEventListener('click', closeSideMenu);
+
+        // মেনু গ্রুপ রেন্ডার
+        function renderMenuGroups(filter = '') {
+            const q = filter.toLowerCase().trim();
+            let h = '';
+            MENU_GROUPS.forEach(g => {
+                let f = g.services;
+                if (q) f = g.services.filter(s => {
+                    const n = lang === 'en' ? s.n: (s.bn || s.n);
+                    return n.toLowerCase().includes(q) || s.cat.toLowerCase().includes(q);
+                });
+                if (q && !f.length) return;
+                const gn = lang === 'en' ? g.nameEn: g.nameBn,
+                gd = lang === 'en' ? g.descEn: g.descBn;
+                h += `<div class="menu-group">
+                <div class="menu-group-header${q ? ' expanded': ''}" onclick="toggleMenuGroup(this)" tabindex="0">
+                <div class="menu-group-icon" style="background:${g.iconBg}">${g.icon}</div>
+                <div class="menu-group-info">
+                <div class="menu-group-name">${gn}</div>
+                <div class="menu-group-desc">${gd}</div>
+                </div>
+                <span class="menu-group-count">${f.length}</span>
+                <span class="menu-group-arrow">▼</span>
+                </div>
+                <div class="menu-group-items${q ? ' expanded': ''}" style="${q ? 'max-height:600px;opacity:1': ''}">
+                ${f.map(s => {
+                    const name = lang === 'en' ? s.n: (s.bn || s.n);
+                    let badge = '';
+                    if (!s.ok) badge = '<span class="menu-item-badge badge-soon">শীঘ্রই</span>';
+                    const bm = isBookmarked(s.n);
+                    return `<a class="menu-item" href="#" onclick="event.preventDefault();goToService('${s.n.replace(/'/g, "\\'")}')">
+                    <span class="menu-item-icon">${s.ico}</span>
+                    <span class="menu-item-info"><span class="menu-item-name">${name}</span></span>
+                    <span class="menu-item-bookmark${bm ? ' bookmarked': ''}" onclick="event.preventDefault();event.stopPropagation();toggleBookmark('${s.n.replace(/'/g, "\\'")}')">${bm ? '⭐': '☆'}</span>
+                    ${badge}
+                    </a>`;
+                }).join('')}
+                </div>
+                </div>`;
+            });
+            if (!h) h = `<div style="padding:30px;text-align:center;color:var(--text-muted)">❌ পাওয়া যায়নি</div>`;
+            document.getElementById('menuGroupsContainer').innerHTML = h;
+        }
+
+        // মেনু গ্রুপ এক্সপ্যান্ড/কলাপ্স
+        function toggleMenuGroup(hdr) {
+            const items = hdr.nextElementSibling;
+            if (items.classList.contains('expanded')) {
+                items.classList.remove('expanded');
+                items.style.maxHeight = '0';
+                items.style.opacity = '0';
+                hdr.classList.remove('expanded');
+            } else {
+                items.classList.add('expanded');
+                items.style.maxHeight = items.scrollHeight + 'px';
+                items.style.opacity = '1';
+                hdr.classList.add('expanded');
+            }
+        }
+
+        // মেনু সার্চ
+        menuSearch.addEventListener('input', function() {
+            renderMenuGroups(this.value);
+        });
+
+        // ---------- ৯. প্যানেল ফাংশন ----------
+        // প্যানেল রেন্ডার (হোম পেজের ভেতরের প্যানেল)
+        function renderPanels() {
+            let h = '';
+            PANEL_GROUPS.forEach(g => {
+                const name = lang === 'en' ? g.nameEn: g.nameBn,
+                sub = lang === 'en' ? g.subEn: g.subBn;
+                h += `<div class="panel">
+                <div class="ph" onclick="togglePanel('${g.id}',this)" tabindex="0">
+                <div class="ph-ico" style="background:${g.iconBg}">${g.icon}</div>
+                <div class="ph-info">
+                <div class="ph-name">${name}</div>
+                <div class="ph-sub">${sub}</div>
+                </div>
+                <span class="ph-cnt">${g.services.length}</span>
+                <button class="arr" id="arr-${g.id}">▼</button>
+                </div>
+                <div class="pb" id="${g.id}">
+                <div class="sg-grid">
+                ${g.services.map(s => `<a class="slink" href="#" onclick="event.preventDefault();goToService('${s.n.replace(/'/g, "\\'")}')">
+                    <span class="sl-ico">${s.ico}</span>
+                    <span class="sl-txt">${lang === 'en' ? s.n: (s.bn || s.n)}</span>
+                    </a>`).join('')}
+                </div>
+                </div>
+                </div>`;
+            });
+            document.getElementById('panelsContainer').innerHTML = h;
+        }
+
+        // প্যানেল টগল
+        function togglePanel(id, hdr) {
+            const body = document.getElementById(id),
+            arrow = document.getElementById('arr-' + id);
+            if (!body) return;
+            if (openPanel && openPanel !== id) {
+                const pb = document.getElementById(openPanel),
+                pa = document.getElementById('arr-' + openPanel);
+                if (pb) {
+                    pb.classList.remove('open');
+                    pb.style.maxHeight = '0';
+                }
+                if (pa) pa.classList.remove('open');
+            }
+            if (body.classList.contains('open')) {
+                body.classList.remove('open');
+                body.style.maxHeight = '0';
+                arrow.classList.remove('open');
+                openPanel = null;
+            } else {
+                body.classList.add('open');
+                body.style.maxHeight = body.scrollHeight + 'px';
+                arrow.classList.add('open');
+                openPanel = id;
+            }
+        }
+
+        // ---------- ১০. ট্যাব ও সার্চ লজিক (সবচেয়ে গুরুত্বপূর্ণ) ----------
+        // ট্যাব পরিবর্তন (হেডার ও ট্যাব বাটন থেকে কল)
+        function switchTab(tab, hideSections = false) {
+            currentTab = tab;
+            // ট্যাব বাটনগুলোতে active ক্লাস টগল
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+
+            // হিরো, প্যানেল, ট্যাব, সুজেস্টশন লুকানো/দেখানো
+            const isSpecial = (tab === 'all' && hideSections) || tab === 'bookmarks' || tab === 'popular';
+            document.getElementById('heroSection').style.display = isSpecial ? 'none': '';
+            document.getElementById('panelsWrap').style.display = isSpecial ? 'none': '';
+            document.getElementById('tabsContainer').style.display = isSpecial ? 'none': '';
+            document.getElementById('searchSuggestions').style.display = isSpecial ? 'none': '';
+
+            // বুকমার্ক ট্যাবে গেলে কাউন্ট আপডেট
+            if (tab === 'bookmarks') {
+                document.getElementById('bookmarkCount').textContent = `(${bookmarks.length})`;
+            }
+
+            // কার্ড রেন্ডার
+            renderCards(document.getElementById('mainSearch').value);
+        }
+
+        // সার্চ পারফর্ম
+        const mainSearch = document.getElementById('mainSearch');
+
+        function performSearch(query) {
+            const q = query.toLowerCase().trim();
+            if (q) document.getElementById('searchClearBtn').classList.add('visible');
+            else document.getElementById('searchClearBtn').classList.remove('visible');
+
+            // সার্চের সময় হিরো, প্যানেল, ট্যাব, সুজেস্টশন লুকিয়ে ফেলি
+            const isSearching = q.length > 0;
+            document.getElementById('heroSection').style.display = isSearching ? 'none': '';
+            document.getElementById('panelsWrap').style.display = isSearching ? 'none': '';
+            document.getElementById('tabsContainer').style.display = isSearching ? 'none': '';
+            document.getElementById('searchSuggestions').style.display = isSearching ? 'none': '';
+
+            // সার্চ ইনফো বার দেখাই
+            if (isSearching) {
+                document.getElementById('searchInfoBar').classList.add('visible');
+                const results = SERVICES.filter(s => {
+                    const n = lang === 'en' ? s.n: (s.bn || s.n);
+                    return n.toLowerCase().includes(q) || s.cat.toLowerCase().includes(q);
+                });
+                document.getElementById('searchInfoText').innerHTML =
+                `🔍 "<strong>${query}</strong>" এর জন্য <strong>${results.length}</strong> টি সার্ভিস`;
+                renderCards(q);
+            } else {
+                document.getElementById('searchInfoBar').classList.remove('visible');
+                renderCards(); // সব কার্ড দেখাবে
+            }
+        }
+
+        // সার্চ ডিবাউন্স
+        let searchDebounce;
+        mainSearch.addEventListener('input', function() {
+            clearTimeout(searchDebounce);
+            const v = this.value;
+            searchDebounce = setTimeout(() => performSearch(v), 300);
+        });
+
+        // সার্চ বাটন
+        document.getElementById('searchSubmitBtn').addEventListener('click', () => {
+            const v = mainSearch.value.trim();
+            if (v) performSearch(v);
+        });
+        mainSearch.addEventListener('keydown', e => {
+            if (e.key === 'Enter') performSearch(mainSearch.value);
+        });
+        document.getElementById('searchClearBtn').addEventListener('click', () => {
+            mainSearch.value = '';
+            performSearch('');
+            mainSearch.focus();
+        });
+        document.getElementById('searchInfoClear').addEventListener('click', () => {
+            mainSearch.value = '';
+            performSearch('');
+            mainSearch.focus();
+        });
+
+        // দ্রুত সার্চ (সুজেস্টশন ট্যাগ)
+        function quickSearch(term) {
+            mainSearch.value = term;
+            performSearch(term);
+        }
+
+        // ---------- ১১. কার্ড রেন্ডার (সবচেয়ে গুরুত্বপূর্ণ) ----------
+        function renderCards(filter = '') {
+            const q = filter.toLowerCase().trim();
+            let html = '',
+            data = [...SERVICES];
+
+            // ট্যাব অনুযায়ী ডেটা ফিল্টার
+            if (currentTab === 'bookmarks' && !q) {
+                data = data.filter(s => bookmarks.includes(s.n));
+                if (!data.length) {
+                    document.getElementById('cardsGrid').innerHTML =
+                    `<div style="grid-column:1/-1;padding:40px;text-align:center;color:var(--text-muted)"><span style="font-size:50px">⭐</span><br>কোনো বুকমার্ক নেই</div>`;
+                    return;
+                }
+            }
+            if (currentTab === 'popular' && !q) {
+                data = getPopularServices(12);
+                if (!data.length) {
+                    document.getElementById('cardsGrid').innerHTML =
+                    `<div style="grid-column:1/-1;padding:40px;text-align:center;color:var(--text-muted)"><span style="font-size:50px">🔥</span><br>কোনো ভিউ নেই</div>`;
+                    return;
+                }
+            }
+
+            // প্রতিটি কার্ড তৈরি
+            data.forEach(s => {
+                const name = lang === 'en' ? s.n: (s.bn || s.n);
+                const cat = s.cat;
+                if (q && !name.toLowerCase().includes(q) && !cat.toLowerCase().includes(q)) return;
+
+                const statusClass = s.ok ? 'g': 'y';
+                const statusText = s.ok ? (lang === 'en' ? 'Active': 'সক্রিয়'): (lang === 'en' ? 'Soon': 'শীঘ্রই');
+                const bm = isBookmarked(s.n);
+                const viewCount = viewCounts[s.n] || 0;
+                const rating = getRating(s.n);
+                const custom = cardCustomizations[s.n] || {};
+
+                // কাস্টমাইজেশন স্টাইল
+                let styleStr = '';
+                if (custom.bg) styleStr += `--card-bg:${custom.bg};`;
+                if (custom.border) styleStr += `--card-border:${custom.border};`;
+                if (custom.radius) styleStr += `--card-radius:${custom.radius};`;
+                if (custom.padding) styleStr += `--card-padding:${custom.padding};`;
+                const styleAttr = styleStr ? ` style="${styleStr}"`: '';
+
+                html += `<div class="card" onclick="handleCardClick('${s.n.replace(/'/g, "\\'")}', event)" data-url="${s.url}"${styleAttr} tabindex="0" data-service-name="${s.n.replace(/'/g, "\\'")}">
+                <div class="card-hint">${lang === 'en' ? 'Long press = Details': 'ধরে রাখুন = বিস্তারিত'}</div>
+                <div class="card-bookmark${bm ? ' bookmarked': ''}" onclick="event.stopPropagation();toggleBookmark('${s.n.replace(/'/g, "\\'")}')">${bm ? '⭐': '☆'}</div>
+                <div class="card-customize-btn" onclick="event.stopPropagation();openCardCustomize('${s.n.replace(/'/g, "\\'")}')">🎨</div>
+                <div class="card-top">
+                <div class="card-icon ${getCatColorClass(cat)}">${s.ico}</div>
+                <div class="card-title-group">
+                <div class="card-title">${name}</div>
+                <div class="card-category">${cat}</div>
+                ${renderStars(s.n, rating)}
+                </div>
+                </div>
+                <div class="card-desc">${lang === 'en' ? (s.descEn || `Professional ${cat} tools`): (s.descBn || `পেশাদার ${cat} টুলস`)}</div>
+                <div class="card-meta"><span class="card-view-count">👁️ ${viewCount} ${lang === 'en' ? 'views': 'বার'}</span></div>
+                <div class="card-footer">
+                <div class="c-status"><div class="sdot ${statusClass}"></div><span>${statusText}</span></div>
+                <span class="c-arr">→</span>
+                </div>
+                </div>`;
+            });
+
+            if (!html) {
+                html =
+                `<div style="grid-column:1/-1;padding:40px;text-align:center;color:var(--text-muted)"><span style="font-size:50px">🔍</span><br>${lang === 'en' ? 'No services found': 'কোনো সার্ভিস পাওয়া যায়নি'}</div>`;
+            }
+
+            document.getElementById('cardsGrid').innerHTML = html;
+            attachTouchEvents();
+        }
+
+        // টাচ ইভেন্ট অ্যাটাচ
+        function attachTouchEvents() {
+            document.querySelectorAll('.card').forEach(card => {
+                const sn = card.getAttribute('data-service-name');
+                if (!sn) return;
+                card.removeEventListener('touchstart', card._ts);
+                card.removeEventListener('touchmove', card._tm);
+                card.removeEventListener('touchend', card._te);
+                card._ts = (e) => handleTouchStart(e, sn);
+                card._tm = (e) => handleTouchMove(e);
+                card._te = (e) => handleTouchEnd(e, sn);
+                card.addEventListener('touchstart', card._ts, {
+                    passive: false
+                });
+                card.addEventListener('touchmove', card._tm, {
+                    passive: true
+                });
+                card.addEventListener('touchend', card._te, {
+                    passive: false
+                });
+            });
+        }
+
+        // ---------- ১২. সেটিংস ফাংশন ----------
+        function setLang(l) {
+            lang = l;
+            localStorage.setItem('lang',
+                l);
+            document.documentElement.setAttribute('data-lang',
+                l);
+            document.querySelectorAll('[data-bn]').forEach(el => {
+                el.textContent = l === 'en' ? (el.dataset.en || el.dataset.bn): el.dataset.bn;
+            });
+            document.getElementById('langSel').value = l;
+            renderCards(document.getElementById('mainSearch').value);
+            renderMenuGroups(document.getElementById('menuSearch').value);
+            renderPanels();
+        }
+
+        function setTheme(t) {
+            document.documentElement.setAttribute('data-theme',
+                t);
+            localStorage.setItem('theme',
+                t);
+            const tog = document.getElementById('darkTog');
+            tog.classList.toggle('on',
+                t === 'dark');
+        }
+
+        function setAccent(a, el) {
+            document.documentElement.setAttribute('data-accent',
+                a);
+            localStorage.setItem('accent',
+                a);
+            document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+            if (el) el.classList.add('active');
+        }
+
+        function setFontSize(f) {
+            document.documentElement.setAttribute('data-font-size', f);
+            localStorage.setItem('fontSize', f);
+        }
+
+        function setCardStyle(s) {
+            document.documentElement.setAttribute('data-card-style', s);
+            localStorage.setItem('cardStyle', s);
+        }
+
+        function toggleAnim(el) {
+            el.classList.toggle('on');
+            const h = el.classList.contains('on');
+            document.documentElement.style.setProperty('--tr', h ? '0.3s cubic-bezier(0.4,0,0.2,1)': '0s');
+            localStorage.setItem('animations', h ? 'on': 'off');
+        }
+
+        function resetSettings() {
+            if (!confirm('সব সেটিং রিসেট করবেন?')) return;
+            localStorage.clear();
+            location.reload();
+        }
+
+        // সেটিংস প্যানেল খোলা/বন্ধ
+        const settOverlay = document.getElementById('settOverlay');
+        document.getElementById('settBtn').addEventListener('click', () => {
+            settOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+
+        function closeSett(e) {
+            if (e && e.target !== settOverlay) return;
+            settOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function openContact() {
+            window.location.href = 'contact.html';
+        }
+
+        // ---------- ১৩. কীবোর্ড শর্টকাট ----------
+        document.addEventListener('keydown', e => {
+            // Escape কী
+            if (e.key === 'Escape') {
+                if (document.getElementById('serviceModalBackdrop').classList.contains('visible')) closeServiceModal();
+                else if (sideMenu.classList.contains('open')) closeSideMenu();
+                else if (settOverlay.classList.contains('open')) closeSett();
+                else if (document.getElementById('cardCustomizePanel').classList.contains('visible'))
+                    closeCardCustomize();
+            }
+            // Ctrl+K → সার্চ ফোকাস
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                mainSearch.focus();
+            }
+            // Ctrl+M → সাইড মেনু টগল
+            if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
+                e.preventDefault();
+                sideMenu.classList.contains('open') ? closeSideMenu(): openSideMenu();
+            }
+        });
+
+        // ---------- ১৪. স্ক্রোল ইভেন্ট ----------
+        // টপ বাটন দেখানো/লুকানো
+        window.addEventListener('scroll', () => {
+            document.getElementById('topBtn').style.display = window.scrollY > 300 ? 'flex': 'none';
+        }, {
+            passive: true
+        });
+
+        // স্ক্রোল প্রোগ্রেস বার
+        window.addEventListener('scroll', () => {
+            const st = window.scrollY,
+            dh = document.documentElement.scrollHeight - window.innerHeight;
+            document.getElementById('scrollProgressBar').style.width = dh > 0 ? (st / dh) * 100 + '%': '0%';
+        }, {
+            passive: true
+        });
+
+        // ---------- ১৫. থিম ডিফল্ট (সিস্টেম প্রেফারেন্স) ----------
+        if (!localStorage.getItem('theme')) setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark':
+            'light');
+
+        // ---------- ১৬. ইনিশিয়ালাইজেশন (পেজ লোড হলে) ----------
+        (function init() {
+            const st = localStorage.getItem('theme') || 'dark';
+            const sa = localStorage.getItem('accent') || 'blue';
+            const sf = localStorage.getItem('fontSize') || 'md';
+            const sc = localStorage.getItem('cardStyle') || 'default';
+            const sl = localStorage.getItem('lang') || 'bn';
+            const san = localStorage.getItem('animations') || 'on';
+
+            setTheme(st);
+            document.documentElement.setAttribute('data-accent', sa);
+            document.documentElement.setAttribute('data-font-size', sf);
+            document.documentElement.setAttribute('data-card-style', sc);
+            document.getElementById('fontSizeSel').value = sf;
+            document.getElementById('cardStyleSel').value = sc;
+            document.querySelectorAll('.swatch').forEach(s => s.classList.toggle('active', s.classList.contains('sw-' + sa)));
+            if (san === 'off') {
+                document.getElementById('animTog').classList.remove('on');
+                document.documentElement.style.setProperty('--tr', '0s');
+            }
+
+            setLang(sl);
+            document.getElementById('bookmarkCount').textContent = `(${bookmarks.length})`;
+            renderCards();
+            renderMenuGroups();
+            renderPanels();
+            document.getElementById('topBtn').style.display = window.scrollY > 300 ? 'flex': 'none';
+
+            console.log('✅ ProServices Hub v7.0 | সকল ব্রাউজার ও ডিভাইসে কাজ করে | হেডার বাটন আপডেট করা হয়েছে');
+        })();
+    </script>
+</body>
+</html>
